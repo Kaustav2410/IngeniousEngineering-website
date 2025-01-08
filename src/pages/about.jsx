@@ -5,7 +5,6 @@ import image from "../assets/chip.jpeg";
 const About = () => {
   return (
     <section>
-      <Navbar />
       <div className="flex flex-col justify-around items-center h-fit gap-10 max-w-screen mx-10">
         {/* About Us Title */}
         <h1 className="text-8xl font-bold">About Us</h1>
@@ -42,9 +41,9 @@ const About = () => {
       <div className="flex flex-col justify-center items-center max-w-screen-lg mx-auto mt-10">
         <h2 className="text-4xl font-bold text-center mb-8">Leadership Team</h2>
         <div className="flex flex-col gap-16 w-full">
-          {/* Leader 1 */}  
-        
-        
+          {/* Leader 1 */}
+
+
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             {/* Text on the Left */}
             <div className="text-left max-w-md group">
