@@ -4,50 +4,66 @@ import {
     CarouselItem,
     CarouselNext,
     CarouselPrevious,
-} from "@/components/ui/carousel";
-import AutoScroll from "embla-carousel-auto-scroll";
-import image from "../../assets/chip.jpeg";
-import useEmblaCarousel from 'embla-carousel-react'
-import { useRef,useEffect } from "react";
+  } from "@/components/ui/carousel";
+  import AutoScroll from "embla-carousel-auto-scroll";
+  import image from "../../assets/chip.jpeg";
+  import useEmblaCarousel from "embla-carousel-react";
+  import { useState, useEffect } from "react";
+  import AlternateReverseTimeline from "./timeline";
 
-const CarouselCustom = () => {
-    // Initialize the AutoScroll plugin
-    const OPTIONS = { loop: true }
+
+
+  const CarouselCustom = ({Data,extraData}) => {
+    console.log(Data,extraData);
+    const OPTIONS = { loop: true };
     const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS, [
-        AutoScroll({ playOnInit: true ,stopOnInteraction:false })
-      ])
+      AutoScroll({ playOnInit: true, stopOnInteraction: false, speed: .3 }),
+    ]);
+    const [activeIndex, setActiveIndex] = useState(0);
 
-        useEffect(() => {
-          if (!emblaApi) return;
+    useEffect(() => {
+      if (!emblaApi) return;
 
-          const autoScroll = emblaApi.plugins().autoScroll;
+      const handleSelect = () => {
+        setActiveIndex(emblaApi.selectedScrollSnap());
+      };
 
-          if (!autoScroll) {
-            console.error("AutoScroll plugin is not initialized.");
-            return;
-          }
-        }, [emblaApi]);
+      emblaApi.on("select", handleSelect);
+      return () => emblaApi.off("select", handleSelect);
+    }, [emblaApi]);
 
     return (
+      <>
         <section className="embla overflow-hidden max-w-[1200px] mx-auto">
-              <div className="embla__viewport" ref={emblaRef}>
-                <div className="embla__container flex">
-                  {[...Array(10)].map((_, index) => (
-                        <div
-                            key={index}
-                            className="embla__slide basis-1/2 lg:basis-1/5 flex-shrink-0"
-                        >
-                            <img
-                                width="180px"
-                                src={image}
-                                alt={`Slide ${index + 1}`}
-                            />
-                        </div>
-                    ))}
+          <div className="embla__viewport" ref={emblaRef}>
+            <div className="embla__container flex">
+              {Data && Data.map((data, index) => (
+                <div
+                  key={index}
+                  className="embla__slide basis-1/2 lg:basis-1/5 flex-shrink-0 flex justify-center items-center flex-col"
+                >
+                  <img
+                    width="180px"
+                    src={image}
+                    alt={`Slide ${index + 1}`}
+                  />
+                  <h2 className="text-center font-semibold mt-2">{data.title}</h2>
                 </div>
-              </div>
-            </section>
-    );
-};
+              ))}
+            </div>
+          </div>
+        </section>
 
-export default CarouselCustom;
+        {/* Render the Timeline for the Active Slide */}
+        {extraData===true &&  <div className="timeline-container mt-8">
+          {Data[activeIndex] && (
+            <AlternateReverseTimeline
+              timelineData={Data[activeIndex].timelineData}
+            />
+          )}
+        </div>}
+      </>
+    );
+  };
+
+  export default CarouselCustom;

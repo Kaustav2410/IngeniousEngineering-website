@@ -8,17 +8,17 @@ const Navbar = () => {
             <img alt="logo" src="#"  />
         </div>
         <ul className="flex gap-14" >
-                <li>Home</li>
+                <li><a href='/'>Home</a></li>
                 <li className='relative' onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} >
                     <p>Company</p>
                     <ul className={`flex flex-col gap-3 p-4 md:w-[100px] lg:w-[200px] absolute bg-blacklala text-white ${isHover?"block":"hidden"} `}>
-                        <li href="/docs" title="Introduction">
-                            About Us
+                        <li>
+                            <a href='/about-us'>About Us</a>
                         </li>
-                        <li href="/docs/installation" title="Installation">
-                        Awards
+                        <li >
+                        <a href='/awards'>Awards</a>
                         </li>
-                        <li href="/docs/primitives/typography" title="Typography">
+                        <li>
                             Quality Policy
                         </li>
                     </ul>
