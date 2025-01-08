@@ -20,7 +20,7 @@ const Home = () => {
             </div>
         </div>
         <div className='flex flex-col justify-around items-center h-fit gap-10 max-w-screen mx-10'>
-            <h1 className='text-heading font-bold'>About Us</h1>
+            <h1 className='text-heading font-bold '>About Us</h1>
             <p className='text-text max-w-screen-lg text-center'>Ingenious is an established engineering company in India engaged in the manufacture of fabricated
             structures of construction and mining machinery</p>
             <img src={image} alt="about_us_image"/>
@@ -53,6 +53,7 @@ const Home = () => {
 
         </div>
         <Footer/>
+
     </section>
   )
 }

@@ -5,40 +5,48 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
+import AutoScroll from "embla-carousel-auto-scroll";
 import image from "../../assets/chip.jpeg";
-import { useRef } from "react";
+import useEmblaCarousel from 'embla-carousel-react'
+import { useRef,useEffect } from "react";
 
 const CarouselCustom = () => {
-    const autoplay = useRef(Autoplay({ delay: 2000, stopOnInteraction: false }));
+    // Initialize the AutoScroll plugin
+    const OPTIONS = { loop: true }
+    const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS, [
+        AutoScroll({ playOnInit: true ,stopOnInteraction:false })
+      ])
+
+        useEffect(() => {
+          if (!emblaApi) return;
+
+          const autoScroll = emblaApi.plugins().autoScroll;
+
+          if (!autoScroll) {
+            console.error("AutoScroll plugin is not initialized.");
+            return;
+          }
+        }, [emblaApi]);
 
     return (
-        <section className="relative">
-            <Carousel
-                className="px-20"
-                options={{ loop: true }} // Enables continuous loop mode
-                plugins={[autoplay.current]} // Autoplay plugin
-            >
-                <CarouselContent>
-                    {/* Dynamically render carousel items */}
-                    {[...Array(10)].map((_, index) => (
-                        <CarouselItem
+        <section className="embla overflow-hidden max-w-[1200px] mx-auto">
+              <div className="embla__viewport" ref={emblaRef}>
+                <div className="embla__container flex">
+                  {[...Array(10)].map((_, index) => (
+                        <div
                             key={index}
-                            className="sm:basis-1/3 md:basis-1/3 lg:basis-1/5"
+                            className="embla__slide basis-1/2 lg:basis-1/5 flex-shrink-0"
                         >
                             <img
                                 width="180px"
                                 src={image}
                                 alt={`Slide ${index + 1}`}
                             />
-                            {/* <p>{index}</p> */}
-                        </CarouselItem>
+                        </div>
                     ))}
-                </CarouselContent>
-                <CarouselPrevious className="bg-blueish text-white absolute left-0 top-1/2 transform -translate-y-1/2" />
-                <CarouselNext className="bg-blueish text-white absolute right-0 top-1/2 transform -translate-y-1/2" />
-            </Carousel>
-        </section>
+                </div>
+              </div>
+            </section>
     );
 };
 
