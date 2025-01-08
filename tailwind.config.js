@@ -19,7 +19,8 @@ export default {
               },
     		colors: {
                 blacklala:"#1a1a1a",
-                blueish:"#048cd6"
+                blueish:"#05b4e3",
+                whiteish:"#3f3f3f"
             }
     	}
     },

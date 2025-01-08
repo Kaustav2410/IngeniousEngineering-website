@@ -1,13 +1,12 @@
 import Carousel_custom from '@/components/custom/carousel_custom'
 import HeroSection from '@/components/custom/heroSection'
-import Navbar from '@/components/custom/navbar'
 import image from "../assets/chip.jpeg"
 import ProductCard from '@/components/custom/productCard'
 import Footer from '@/components/custom/footer'
+import { ClientData } from '@/constants/data'
 const Home = () => {
   return (
     <section>
-        <Navbar/>
         <HeroSection/>
         <div className='flex flex-col justify-around items-center h-fit gap-10 max-w-screen bg-[linear-gradient(to-top, white 50%, blacklala 50%)]'>
             <div className='max-w-[1200px] mx-auto'>
@@ -49,10 +48,9 @@ const Home = () => {
                 <p className='text-text max-w-screen-lg text-center'>"We proudly supply to renowned OEM clients, ensuring complete satisfaction with our quality and timely
                 delivery. We focus exclusively on serving OEMs, not retail clients."</p>
             </div>
-            <Carousel_custom/>
+            <Carousel_custom Data={ClientData} extraData={false}/>
 
         </div>
-        <Footer/>
 
     </section>
   )
