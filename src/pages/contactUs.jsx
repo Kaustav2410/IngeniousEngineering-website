@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Navbar from "@/components/custom/navbar";
 import Values from "@/components/custom/values";
 import image from "../assets/chip.jpeg";
 
@@ -62,7 +61,6 @@ const ContactUs = () => {
 
   return (
     <section className="bg-gray-100">
-      <Navbar />
 
       {/* Hero Section */}
       <div 
