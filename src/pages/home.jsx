@@ -10,10 +10,10 @@ const Home = () => {
         <HeroSection/>
         <div className='flex flex-col justify-around items-center h-fit gap-10 max-w-screen bg-[linear-gradient(to-top, white 50%, blacklala 50%)]'>
             <div className='max-w-[1200px] mx-auto'>
-            <div className='flex flex-col justify-center items-center gap-10'>
-                    <h1 className='text-subheading'>Explore Our Equipment & Expertise</h1>
-                    <p className='text-text max-w-screen-lg text-center'>Founded nearly a decade ago, we've grown through quality, precision, and collaboration,
-                    offering top-tier equipment backed by skilled engineers and a dedicated workforce</p>
+            <div className='flex flex-col justify-center items-start gap-10'>
+                    <h1 className='text-subheading font-bold py-10'>Explore Our Equipment & Expertise</h1>
+                    <p className='text-2xl max-w-screen-lg text-left '>Founded nearly a decade ago, we've grown through quality, precision, and collaboration,
+                    offering top-tier equipment backed by skilled engineers and a dedicated workforce.</p>
                     <ProductCard/>
             </div>
             </div>
@@ -22,7 +22,7 @@ const Home = () => {
             <h1 className='text-heading font-bold '>About Us</h1>
             <p className='text-text max-w-screen-lg text-center'>Ingenious is an established engineering company in India engaged in the manufacture of fabricated
             structures of construction and mining machinery</p>
-            <img src={image} alt="about_us_image"/>
+            <img src="/Images/Banner/2.png" alt="about_us_image" width="600" height="300"/>
             <div className='flex justify-around items-center gap-10 flex-col md:flex-row w-full'>
                 <div className='flex flex-col justify-center items-center gap-1'>
                     <h2 className='text-subheading font-bold'>2023</h2>
