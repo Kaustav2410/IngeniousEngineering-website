@@ -28,7 +28,7 @@ const Navbar = () => {
 
                 <li>Career</li>
 
-                <li>Contact us</li>
+                <li><a href='/contact-us'>Contact Us</a></li>
         </ul>
     </nav>
   )
