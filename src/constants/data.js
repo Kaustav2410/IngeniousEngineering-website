@@ -1,10 +1,31 @@
 import image from "/chip.jpeg"
+import { z } from "zod"
+export const contactUsSchema = z.object({
+    firstName: z.string().min(1, { message: "First name is required." }),
+    lastName: z.string().min(1, { message: "Last name is required." }),
+    email: z.string().email({ message: "Invalid email address." }),
+    phone: z.string().optional(),
+    company: z.string().optional(),
+    state: z.string().optional(),
+    country: z.string().optional(),
+    message: z.string().min(10, { message: "Message must be at least 10 characters." }),
+  })
+
+  export const careerSchema = z.object({
+    first: z.string().min(1, { message: "First name is required." }),
+    last: z.string().min(1, { message: "Last name is required." }),
+    email: z.string().email({ message: "Invalid email address." }),
+    phone: z.string().optional(),
+    resume: z.string().optional(),
+    state: z.string().optional(),
+    country: z.string().optional(),
+    message: z.string().min(10, { message: "Message must be at least 10 characters." }),
+  })
 export const SectionEnum = {
     AWARDS:"AWARDS",
     PRODUCTS:"PRODUCTS",
     HOME:"HOME"
   };
-
 export const ClientData= [
     {
         title:"Volvo India Private Limited"
