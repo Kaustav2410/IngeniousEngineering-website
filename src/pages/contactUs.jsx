@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import image from "../assets/chip.jpeg";
 import Forms from '@/components/custom/forms';
-import z from "zod";
 import { contactUsSchema } from '@/constants/data'
+import { FormEnum } from '@/constants/data';
 const ContactUs = () => {
     const fields = [
         { name: "firstName", label: "First Name", required: true, placeholder: "First Name" },
@@ -56,6 +56,7 @@ const ContactUs = () => {
             schema={contactUsSchema}
             fields={fields}
             handleSubmit={onSubmit}
+            formType={FormEnum.CONTACT}
             />
 
         {/* Contact Details */}

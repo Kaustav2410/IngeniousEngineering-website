@@ -1,8 +1,8 @@
 import React from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-
-const Forms = ({ schema, fields, handleSubmit }) => {
+import { FormEnum } from "@/constants/data";
+const Forms = ({ schema, fields, handleSubmit,formType}) => {
   const form = useForm({
     resolver: zodResolver(schema),
     defaultValues: fields.reduce((acc, field) => ({ ...acc, [field.name]: "" }), {}),
@@ -12,7 +12,7 @@ const Forms = ({ schema, fields, handleSubmit }) => {
     <div className="w-full max-w-3xl">
       <p className="text-sm text-gray-600 mb-6">* indicates required fields</p>
       <form
-        className="bg-gray-200 p-10 rounded-lg"
+        className={`${FormEnum.CAREER===formType?"bg-white":"bg-gray-200"} p-10 rounded-lg`}
         onSubmit={form.handleSubmit((data) => {
             // console.log("Form data before submit:", data); // Logs processed form data
             handleSubmit(data); // Passes data to parent onSubmit function
@@ -21,7 +21,7 @@ const Forms = ({ schema, fields, handleSubmit }) => {
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {fields.map((field) => {
-            if (field.type === "email" || field.type === "message") {
+            if (field.name === "email" ||  field.name === "message") {
               return null; // Skip fields handled separately below
             }
 
@@ -52,7 +52,7 @@ const Forms = ({ schema, fields, handleSubmit }) => {
 
         <div className="mt-6">
           {fields
-            .filter((field) => field.type === "email" || field.type === "message")
+            .filter((field) => field.name === "email" || ( field.name === "message"))
             .map((field) => (
               <div key={field.name}>
                 <label
