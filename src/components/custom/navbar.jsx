@@ -19,7 +19,9 @@ const Navbar = () => {
                         <a href='/awards'>Awards</a>
                         </li>
                         <li>
+                            <a href='/quality-policy'>
                             Quality Policy
+                            </a>
                         </li>
                     </ul>
                 </li>
