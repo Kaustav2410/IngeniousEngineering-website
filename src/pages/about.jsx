@@ -1,13 +1,13 @@
 import Navbar from "@/components/custom/navbar";
 import Values from "@/components/custom/values";
-import image from "../assets/chip.jpeg";
+import image from "/Images/Others/4.svg";
 
 const About = () => {
   return (
     <section>
-      <div className="flex flex-col justify-around items-center h-fit gap-10 max-w-screen mx-10">
+      <div className="flex flex-col justify-around items-center h-fit gap-10 max-w-screen mx-10 bg-gray-100">
         {/* About Us Title */}
-        <h1 className="text-8xl font-bold">About Us</h1>
+        <h1 className="text-7xl font-bold pt-5">ABOUT US</h1>
         <div className="flex flex-col md:flex-row justify-around items-center gap-10 w-full mt-[52px]">
           {/* Left Section */}
           <div className="flex flex-col gap-10 max-w-md text-left">
@@ -27,6 +27,8 @@ const About = () => {
           {/* Right Section (Image) */}
           <div>
             <img
+              width="400px"
+              height="400px"
               src={image}
               alt="About Us"
               className="rounded-lg shadow-lg max-w-full"
@@ -38,8 +40,8 @@ const About = () => {
       <Values />
 
       {/* Leadership Team Section */}
-      <div className="flex flex-col justify-center items-center max-w-screen-lg mx-auto mt-10">
-        <h2 className="text-4xl font-bold text-center mb-8">Leadership Team</h2>
+      <div className="flex flex-col justify-center items-center max-w-screen-lg mx-auto mt-10 pb-14">
+        <h2 className="text-6xl font-bold text-center mb-14">Leadership Team</h2>
         <div className="flex flex-col gap-16 w-full">
           {/* Leader 1 */}
 
@@ -47,10 +49,10 @@ const About = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             {/* Text on the Left */}
             <div className="text-left max-w-md group">
-              <h3 className="text-3xl font-bold relative group-hover:text-blue-500">Rajesh Goel</h3>
+              <h3 className="text-subheading font-bold relative group-hover:text-blue-500">Rajesh Goel</h3>
               <div className="w-0 h-[3px] bg-blue-500 mt-1.5 transition-all duration-300 ease-out group-hover:w-1/2"></div>
               <p className="text-lg font-semibold text-gray-600 mt-2">MD</p>
-              <p className="mt-4 text-gray-600 text-sm">
+              <p className="mt-4 text-gray-600 text-md">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s.
@@ -60,7 +62,7 @@ const About = () => {
             <img
               src={image}
               alt="Rajesh Goel"
-              className="w-40 h-40 rounded-lg shadow-md"
+              className="w-48 h-48 rounded-lg shadow-md"
             />
           </div>
 
@@ -68,10 +70,10 @@ const About = () => {
           <div className="flex flex-col md:flex-row-reverse justify-between items-center gap-6">
             {/* Text on the Right */}
             <div className="text-right max-w-md group">
-              <h3 className="text-3xl font-bold relative group-hover:text-blue-500">Keshava Murthy</h3>
+              <h3 className="text-subheading font-bold relative group-hover:text-blue-500">Keshava Murthy</h3>
               <div className="w-0 h-[3px] bg-blue-500 mt-1.5 ml-auto transition-all duration-300 ease-out group-hover:w-1/2"></div>
               <p className="text-lg font-semibold text-gray-600 mt-2">Sr. GM</p>
-              <p className="mt-4 text-gray-600 text-sm">
+              <p className="mt-4 text-gray-600 text-md">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s.
@@ -81,7 +83,7 @@ const About = () => {
             <img
               src={image}
               alt="Keshava Murthy"
-              className="w-40 h-40 rounded-lg shadow-md"
+              className="w-48 h-48 rounded-lg shadow-md"
             />
           </div>
         </div>

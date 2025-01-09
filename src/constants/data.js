@@ -32,33 +32,39 @@ export const FormEnum = {
   };
 export const ClientData= [
     {
-        title:"Volvo India Private Limited"
+        title:"Volvo India Private Limited",
+        imageUrl:"/Images/Logos/png-transparent-volvo-logo-volvo-cars-ab-volvo-logo-pga-tour-volvo-car-logo-brand-company-text-trademark.png"
     },
     {
-        title:" Kobelco Construction Equipment India Pvt. Ltd."
+        title:" Kobelco Construction Equipment India Pvt. Ltd.",
+        imageUrl:"/Images/Logos/png-transparent-kobelco-hd-logo.png"
     },
     {
-        title:"Tata Hitachi Construction Machinery"
+        title:"Tata Hitachi Construction Machinery",
+        imageUrl:"/Images/Logos/Tata_Hitachi_Construction_Machinery_Company_Ltd..svg.png"
     },
     {
-        title:"BHEL"
+        title:"BHEL",
+        imageUrl:"/Images/Logos/manufacturing-ntpc-limited-industry-logo-area.jpg"
     },
     {
-        title:"BEML Limited"
+        title:"BEML Limited",
+        imageUrl:"/Images/Logos/BEML_Limited_Logo.png"
     },
-    {
-        title:"L&T Komatsu Limited"
-    },
-    {
-        title:"Leeboy India Equipment Pvt. Ltd."
-    },
-    {
-        title:"Doosan Infracore India Pvt. Ltd."
-    },
+    // {
+    //     title:"L&T Komatsu Limited"
+    // },
+    // {
+    //     title:"Leeboy India Equipment Pvt. Ltd."
+    // },
+    // {
+    //     title:"Doosan Infracore India Pvt. Ltd."
+    // },
 ]
 export const ProductData= [
     {
         title:"EXCAVATORS",
+        imageUrl:"/Images/Others/5.svg",
         productData:[
             "Buckets Sizes 0.75T to 125T Excavators",
             "Under Frames of Excavators up to 60T Capacity",
@@ -70,6 +76,7 @@ export const ProductData= [
     },
     {
         title:" ROAD MACHINERY",
+        imageUrl:"/Images/Others/6.svg",
         productData:[
             "Main Frame for Pneumatic Tyre Roller Compactors, Pavers etc.",
             "Main Frames and Structures for Compactors.",
@@ -78,6 +85,7 @@ export const ProductData= [
     },
     {
         title:"MINING MACHINERY",
+        imageUrl:"/Images/Others/7.svg",
         productData:[
             "Crusher Frames for Stone Crushing Machinery.",
             "Rotors",

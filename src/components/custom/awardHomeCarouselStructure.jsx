@@ -7,7 +7,8 @@ const AwardHomeCarouselStructure = ({data,optionalStyles}) => {
     >
     <img
       width="180px"
-      src={image}
+      height="180px"
+      src={data.imageUrl}
       alt={`Slide`}
     />
     <h2 className="text-center font-semibold mt-2">{data.title}</h2>

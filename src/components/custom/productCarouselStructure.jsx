@@ -2,10 +2,10 @@ import React from 'react'
 
 const ProductCarouselStructure = ({optionalStyles,data,index,handleSlideClick}) => {
   return (
-    <div className={`embla__slide ${optionalStyles} flex-shrink-0 flex justify-center items-start gap-20 py-20 flex-col  text-white `} onClick={() => handleSlideClick(index)}>
+    <div className={`embla__slide ${optionalStyles} flex-shrink-0 flex justify-center items-start gap-20 py-20 flex-col  text-white ] group`} onClick={() => handleSlideClick(index)}  style={{ backgroundImage: `url(${data.imageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div>
         <h3 className="text-3xl font-bold relative group-hover:text-blue-500">{data.title}</h3>
-        <div className="w-0 h-[3px] bg-blue-500 mt-1.5  transition-all duration-300 ease-out group-hover:w-1/2"></div>
+        <div className="w-0 h-[3px] bg-blue-500 mt-1.5  transition-all duration-300 ease-out group-hover:w-full"></div>
         <p className='text-text max-w-[300px]'>Precision-driven performance for unmatched
         cutting efficiency and versatility</p>
     </div>
