@@ -5,6 +5,7 @@ import About from "./pages/about"
 import ContactUs from "./pages/contactUs"
 import Career from "./pages/career"
 import Awards from "./pages/awards";
+import Product from "./pages/product";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Route index element={<Career/>}  />
         <Route path="/about-us" element={<About/>}  />
         <Route path="/awards" element={<Awards/>}  />
+        <Route path="/products" element={<Product/>}  />
     </Routes>
   );
 }
