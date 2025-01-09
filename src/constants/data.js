@@ -367,3 +367,79 @@ export const ProductData= [
     },
 
   ];
+export const machinesData = [
+    {
+      slNo: 1,
+      name: "6 axes CNC Floor Mounted Horizontal Boring Machine. Make: FERMAT – Czech Republic",
+      qty: 1,
+      sizeAndCapacity: `X: 9,500mm, Y: 3,500mm, W+Z: 1,500mm, V: 1,400mm,
+                        Table size: 2,000 x 2,400, Table Travel: 1500mm, Table capacity: 25MT,
+                        Spindle diameter: 130mm, 4 heads`,
+    },
+    {
+      slNo: 2,
+      name: "CNC Gas / Plasma cutting machine Make: Messers",
+      qty: 1,
+      sizeAndCapacity: "20,000mm (L) x 3,500mm (W), Kjellberg Q3000+",
+    },
+    {
+      slNo: 3,
+      name: "CNC Press Brake Make: Hindustan Hydraulics",
+      qty: 1,
+      sizeAndCapacity: "140 MT, 3,000mm width",
+    },
+    {
+      slNo: 4,
+      name: "Radial Drilling Machines",
+      qty: 1,
+      sizeAndCapacity: "Drilling capacity 50mm solid. Radial arm 1,800mm",
+    },
+    {
+      slNo: 5,
+      name: "Welding Machine",
+      qty: 12,
+      sizeAndCapacity: "KR-500, Panasonic",
+    },
+    {
+      slNo: 6,
+      name: "Gouging machine",
+      qty: 1,
+      sizeAndCapacity: "Panasonic",
+    },
+    {
+      slNo: 7,
+      name: "Shot Blasting Chamber",
+      qty: 1,
+      sizeAndCapacity: "13m (L) x 6m (W) x 3.5m (H)",
+    },
+    {
+      slNo: 8,
+      name: "Airless Spray-Painting Booth",
+      qty: 1,
+      sizeAndCapacity: "13m (L) x 5m (W) x 3.5m (H)",
+    },
+    {
+      slNo: 9,
+      name: "Drying Oven - Electric",
+      qty: 1,
+      sizeAndCapacity: "5.2m (L) x 2.9m (W) x 2.5m (H)",
+    },
+    {
+      slNo: 10,
+      name: "Hydraulic Test Rig for Excavator Attachments",
+      qty: 1,
+      sizeAndCapacity: "High pressure testing at 350Bar",
+    },
+    {
+      slNo: 11,
+      name: "Forklift",
+      qty: 1,
+      sizeAndCapacity: "3T Capacity with 6,000mm lift height",
+    },
+    {
+      slNo: 12,
+      name: "Cranes",
+      qty: 2,
+      sizeAndCapacity: "Maximum capacity 10 MT",
+    },
+  ];

@@ -19,9 +19,10 @@ const Navbar = () => {
                         <a href='/awards'>Awards</a>
                         </li>
                         <li>
-                            <a href='/quality-policy'>
-                            Quality Policy
-                            </a>
+                            <a href='/quality-policy'>Quality Policy</a>
+                        </li>
+                        <li>
+                            <a href='/strategy'>Strategy</a>
                         </li>
                     </ul>
                 </li>
