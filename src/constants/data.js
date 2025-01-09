@@ -1,4 +1,10 @@
 import image from "/chip.jpeg"
+export const SectionEnum = {
+    AWARDS:"AWARDS",
+    PRODUCTS:"PRODUCTS",
+    HOME:"HOME"
+  };
+
 export const ClientData= [
     {
         title:"Volvo India Private Limited"
@@ -25,7 +31,37 @@ export const ClientData= [
         title:"Doosan Infracore India Pvt. Ltd."
     },
 ]
+export const ProductData= [
+    {
+        title:"EXCAVATORS",
+        productData:[
+            "Buckets Sizes 0.75T to 125T Excavators",
+            "Under Frames of Excavators up to 60T Capacity",
+            "Revolving Frames of Excavators up to 60T Capacity",
+            "Booms, Arms and Buckets for Excavators up 60T Capacity",
+            "Linkage Structures for Excavators",
+            "Excavator Attachments such as Tilt Couplers, Chubb Thumb, Twin fork, Track Guards etc."
+          ]
+    },
+    {
+        title:" ROAD MACHINERY",
+        productData:[
+            "Main Frame for Pneumatic Tyre Roller Compactors, Pavers etc.",
+            "Main Frames and Structures for Compactors.",
+            "Compactor Parts for Drive System."
+          ]
+    },
+    {
+        title:"MINING MACHINERY",
+        productData:[
+            "Crusher Frames for Stone Crushing Machinery.",
+            "Rotors",
+            "Chassis for Stone Crushing Machinery.",
+            "Liner Plates"
+          ]
+    },
 
+]
   export const AwardsData = [
     {
       title: "Volvo India Private Limited",
