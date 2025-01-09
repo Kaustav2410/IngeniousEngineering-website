@@ -9,7 +9,7 @@ const Navbar = () => {
         </div>
         <ul className="flex gap-14" >
                 <li><a href='/'>Home</a></li>
-                <li className='relative' onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} >
+                <li className='relative z-10' onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} >
                     <p>Company</p>
                     <ul className={`flex flex-col gap-3 p-4 md:w-[100px] lg:w-[200px] absolute bg-blacklala text-white ${isHover?"block":"hidden"} `}>
                         <li>
@@ -24,7 +24,7 @@ const Navbar = () => {
                     </ul>
                 </li>
 
-                <li>Products</li>
+                <li><a href='/products'>Product</a></li>
 
                 <li>Career</li>
 

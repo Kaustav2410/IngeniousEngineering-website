@@ -3,7 +3,7 @@ import HeroSection from '@/components/custom/heroSection'
 import image from "../assets/chip.jpeg"
 import ProductCard from '@/components/custom/productCard'
 import Footer from '@/components/custom/footer'
-import { ClientData } from '@/constants/data'
+import { ClientData,SectionEnum } from '@/constants/data'
 const Home = () => {
   return (
     <section>
@@ -48,7 +48,7 @@ const Home = () => {
                 <p className='text-text max-w-screen-lg text-center'>"We proudly supply to renowned OEM clients, ensuring complete satisfaction with our quality and timely
                 delivery. We focus exclusively on serving OEMs, not retail clients."</p>
             </div>
-            <Carousel_custom Data={ClientData} extraData={false}/>
+            <Carousel_custom Data={ClientData} extraData={false} optionalStyles={"basis-1/2 lg:basis-1/5"} cardStructure={SectionEnum.HOME}/>
 
         </div>
 
