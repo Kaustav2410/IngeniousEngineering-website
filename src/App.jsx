@@ -7,6 +7,7 @@ import Career from "./pages/career"
 import Awards from "./pages/awards";
 import Product from "./pages/product";
 import QualityPolicy from "./pages/qualityPolicy";
+import Strategy from "./pages/strategy";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/contact-us" element={<ContactUs/>}  />
         <Route path="/career" element={<Career/>}  />
         <Route path="/quality-policy" element={<QualityPolicy/>}  />
+        <Route path="/strategy" element={<Strategy/>}  />
     </Routes>
   );
 }
