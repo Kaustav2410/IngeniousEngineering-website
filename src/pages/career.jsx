@@ -1,7 +1,22 @@
 import React from "react";
 import Values from "@/components/custom/values";
-
+import { careerSchema } from '@/constants/data'
+import Forms from '@/components/custom/forms';
+import { FormEnum } from "@/constants/data";
 const Career = () => {
+    const fields = [
+        { name: "firstName", label: "First Name", required: true, placeholder: "First Name" },
+        { name: "lastName", label: "Last Name", required: true, placeholder: "Last Name" },
+        { name: "email", label: "Email", required: true, type: "email", placeholder: "Email" },
+        { name: "phone", label: "Phone", required: false, placeholder: "Phone" },
+        { name: "resume", label: "Resume", required: true, placeholder: "Resume",type:"file" },
+        { name: "state", label: "State", required: false, placeholder: "State" },
+        { name: "country", label: "Country", required: false, placeholder: "Country" },
+        { name: "message", label: "Message", required: true, type: "textarea", placeholder: "Message" },
+      ];
+      const onSubmit  = (data) => {
+        console.log("Contact Us Form Submitted", data);
+      };
   return (
     <div>
       {/* Header Section */}
@@ -70,87 +85,13 @@ const Career = () => {
       <Values />
       <div className="flex flex-col md:flex-row w-full h-screen items-center justify-center p-8">
         {/* Left Section - Form */}
-        <div className="w-full md:w-1/2 max-w-lg bg-white p-8 rounded-lg">
-          <form className="space-y-4">
-            <div>
-              <label
-                className="block text-sm font-medium text-gray-700"
-                htmlFor="name"
-              >
-                Full Name :
-              </label>
-              <input
-                type="text"
-                id="name"
-                placeholder="Enter your full name"
-                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-3xl focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-              />
-            </div>
-            <div>
-              <label
-                className="block text-sm font-medium text-gray-700"
-                htmlFor="email"
-              >
-                E-Mail :
-              </label>
-              <input
-                type="email"
-                id="email"
-                placeholder="Enter your email"
-                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-3xl focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-              />
-            </div>
-            <div>
-              <label
-                className="block text-sm font-medium text-gray-700"
-                htmlFor="phone"
-              >
-                Phone Number :
-              </label>
-              <input
-                type="tel"
-                id="phone"
-                placeholder="Enter your phone number"
-                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-3xl focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-              />
-            </div>
-            <div>
-              <label
-                className="block text-sm font-medium text-gray-700"
-                htmlFor="resume"
-              >
-                Resume:
-              </label>
-              <div className="flex items-center mt-1">
-                <input
-                  type="file"
-                  id="resume"
-                  className="block w-full text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-3xl file:border-0 file:text-sm file:font-semibold file:bg-blue-100 file:text-blue-700 hover:file:bg-blue-200"
-                />
-              </div>
-            </div>
-            <div>
-              <label
-                className="block text-sm font-medium text-gray-700"
-                htmlFor="message"
-              >
-                Message :
-              </label>
-              <textarea
-                id="message"
-                placeholder="Write your message here"
-                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-3xl focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                rows="4"
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="w-full px-4 py-2 text-white bg-blue-500 rounded-3xl hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-            >
-              SEND MESSAGE
-            </button>
-          </form>
-        </div>
+
+  <Forms
+        schema={careerSchema}
+        fields={fields}
+        handleSubmit={onSubmit}
+        formType={FormEnum.CAREER}
+        />
 
         {/* Right Section - Text */}
         <div className="w-full h-full md:w-1/2 flex flex-col items-end text-right p-8">

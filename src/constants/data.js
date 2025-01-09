@@ -12,8 +12,8 @@ export const contactUsSchema = z.object({
   })
 
   export const careerSchema = z.object({
-    first: z.string().min(1, { message: "First name is required." }),
-    last: z.string().min(1, { message: "Last name is required." }),
+    firstName: z.string().min(1, { message: "First name is required." }),
+    lastName: z.string().min(1, { message: "Last name is required." }),
     email: z.string().email({ message: "Invalid email address." }),
     phone: z.string().optional(),
     resume: z.string().optional(),
@@ -25,6 +25,10 @@ export const SectionEnum = {
     AWARDS:"AWARDS",
     PRODUCTS:"PRODUCTS",
     HOME:"HOME"
+  };
+export const FormEnum = {
+    CAREER:"CAREER",
+    CONTACT:"CONTACT",
   };
 export const ClientData= [
     {
