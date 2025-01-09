@@ -2,7 +2,7 @@ import Carousel_custom from '@/components/custom/carousel_custom'
 import HeroSection from '@/components/custom/heroSection'
 import image from "../assets/chip.jpeg"
 import ProductCard from '@/components/custom/productCard'
-import Footer from '@/components/custom/footer'
+
 import { ClientData,SectionEnum } from '@/constants/data'
 const Home = () => {
   return (
