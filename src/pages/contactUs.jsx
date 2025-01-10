@@ -68,13 +68,13 @@ const ContactUs = () => {
           Bengaluru -563130</p>
 
           <h3 className="text-2xl font-semibold">Phone</h3>
-          <p className="mt-2 text-lg">+61 1800 987 525</p>
+          <p className="mt-2 text-lg">+91-080-27971482, 83</p>
 
           <h3 className="text-2xl font-semibold mt-4">Fax</h3>
-          <p className="mt-2 text-lg">+61 1300 33 8482</p>
+          <p className="mt-2 text-lg">+91-80-27971428</p>
 
           <h3 className="text-2xl font-semibold mt-4">Email</h3>
-          <p className="mt-2 text-lg">customerservice@crmining.com</p>
+          <p className="mt-2 text-lg">info@ferrum.co.in</p>
         </div>
       </div>
     </section>

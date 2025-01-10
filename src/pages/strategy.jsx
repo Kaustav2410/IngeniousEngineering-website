@@ -36,7 +36,7 @@ const Strategy = () => {
       <div className="bg-[url('/Images/Banner/1.png')] max-w-screen h-screen bg-cover">
         <div className="px-10 w-full mx-auto max-w-[1200px] flex flex-col justify-center items-start gap-10 text-white">
           <div className="group">
-            <h1 className="text-heading font-bold group-hover:text-blue-500 pt-5">Quality Plan</h1>
+            <h1 className="text-heading font-bold group-hover:text-blue-500 pt-5">QUALITY PLAN</h1>
             <div className="w-0 h-[3px] bg-blue-500 mt-1.5 transition-all duration-300 ease-out group-hover:w-full"></div>
           </div>
           <ul className="text-xl flex flex-col gap-4">
