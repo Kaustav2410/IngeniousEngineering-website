@@ -53,8 +53,8 @@ const Home = () => {
                 <p className='text-text text-center '>"We proudly supply to renowned OEM clients, ensuring complete satisfaction with our quality and timely
                 delivery. We focus exclusively on serving OEMs, not retail clients."</p>
             </div>
-           <div>
-           <Carousel_custom Data={ClientData} extraData={false} optionalStyles={"basis-full md:basis-1/5"} cardStructure={SectionEnum.HOME}/>
+           <div className='mt-5 mx-auto max-w-[1200px] w-full px-10'>
+           <Carousel_custom Data={ClientData} extraData={false} optionalStyles={" basis:full sm:basis-1/2 lg:basis-1/4"} cardStructure={SectionEnum.HOME}/>
            </div>
 
         </div>

@@ -7,7 +7,7 @@ const Footer = () => {
                 <h2 className='font-extrabold text-3xl pb-10'>Ingenious Engineering Pvt. Ltd. </h2>
             <div>
             </div>
-            <div className='flex justify-around gap-10 md:items-start flex-col-reverse md:flex-row w-full pb-20'>
+            <div className='flex justify-between gap-10 md:items-start flex-col-reverse md:flex-row w-full pb-20'>
                 <div className='w-1/2 max-w-[400px] h-80'>
                 <iframe
                         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31085.47100014029!2d77.827653!3d13.119202!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae042fb2da2d9d%3A0xf9b73806ec289f63!2sFerrum%20Extreme%20Engineering%20Pvt.%20Ltd.!5e0!3m2!1sen!2sus!4v1736357932635!5m2!1sen!2sus"

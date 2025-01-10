@@ -415,7 +415,7 @@ export const ProductData= [
     },
 
   ];
-export const machinesData = [
+  export const machinesData = [
     {
       slNo: 1,
       name: "6 axes CNC Floor Mounted Horizontal Boring Machine. Make: FERMAT - Czech Republic",
@@ -423,71 +423,77 @@ export const machinesData = [
       sizeAndCapacity: `X: 9,500mm, Y: 3,500mm, W+Z: 1,500mm, V: 1,400mm,
                         Table size: 2,000 x 2,400, Table Travel: 1500mm, Table capacity: 25MT,
                         Spindle diameter: 130mm, 4 heads`,
+      imageUrl: "Images/Others/10.svg",
     },
     {
       slNo: 2,
       name: "CNC Gas / Plasma cutting machine Make: Messers",
       qty: 1,
       sizeAndCapacity: "20,000mm (L) x 3,500mm (W), Kjellberg Q3000+",
+      imageUrl: "Images/Others/12.svg",
     },
     {
       slNo: 3,
       name: "CNC Press Brake Make: Hindustan Hydraulics",
       qty: 1,
       sizeAndCapacity: "140 MT, 3,000mm width",
+      imageUrl: "Images/Others/15.svg",
     },
     {
       slNo: 4,
       name: "Radial Drilling Machines",
       qty: 1,
       sizeAndCapacity: "Drilling capacity 50mm solid. Radial arm 1,800mm",
+      imageUrl: "Images/Others/13.svg",
     },
     {
       slNo: 5,
       name: "Welding Machine",
       qty: 12,
       sizeAndCapacity: "KR-500, Panasonic",
+      imageUrl: "Images/Others/17.svg",
     },
     {
       slNo: 6,
       name: "Gouging machine",
       qty: 1,
       sizeAndCapacity: "Panasonic",
+      imageUrl: "Images/Others/14.svg",
     },
     {
       slNo: 7,
       name: "Shot Blasting Chamber",
       qty: 1,
       sizeAndCapacity: "13m (L) x 6m (W) x 3.5m (H)",
+      imageUrl: "Images/Others/16.svg",
     },
     {
       slNo: 8,
       name: "Airless Spray-Painting Booth",
       qty: 1,
       sizeAndCapacity: "13m (L) x 5m (W) x 3.5m (H)",
+      imageUrl: "Images/Others/11.svg",
     },
     {
       slNo: 9,
       name: "Drying Oven - Electric",
       qty: 1,
       sizeAndCapacity: "5.2m (L) x 2.9m (W) x 2.5m (H)",
-    },
-    {
-      slNo: 10,
-      name: "Hydraulic Test Rig for Excavator Attachments",
-      qty: 1,
-      sizeAndCapacity: "High pressure testing at 350Bar",
+      imageUrl: "Images/Others/18.svg",
     },
     {
       slNo: 11,
       name: "Forklift",
       qty: 1,
       sizeAndCapacity: "3T Capacity with 6,000mm lift height",
+      imageUrl: "Images/Others/8.svg",
     },
     {
       slNo: 12,
       name: "Cranes",
       qty: 2,
       sizeAndCapacity: "Maximum capacity 10 MT",
+      imageUrl: "Images/Others/9.svg",
     },
   ];
+

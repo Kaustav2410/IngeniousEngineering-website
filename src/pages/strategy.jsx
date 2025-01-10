@@ -1,8 +1,28 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import strategyFlow from '/Images/Banner/5.png';
 import { machinesData } from '@/constants/data';
 
 const Strategy = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState('');
+  const equipmentsRef = useRef(null); // Ref for Equipments section
+
+  const openModal = (imageUrl) => {
+    setSelectedImage(imageUrl);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedImage('');
+  };
+
+  const scrollToEquipments = () => {
+    if (equipmentsRef.current) {
+      equipmentsRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div>
       {/* Hero Section */}
@@ -22,9 +42,13 @@ const Strategy = () => {
                 type="button"
                 className="w-40 h-14 rounded-xl px-6 bg-blueish text-neutral-50 shadow hover:bg-blacklala"
               >
-                GET IN TOUCH
+                <a href="/contact-us">GET IN TOUCH</a>
               </button>
-              <button className="w-50 h-14 rounded-xl px-6 bg-white text-black shadow hover:bg-black hover:text-white">
+              <button
+                type="button"
+                onClick={scrollToEquipments} // Add scroll handler
+                className="w-50 h-14 rounded-xl px-6 bg-white text-black shadow hover:bg-black hover:text-white"
+              >
                 VIEW EQUIPMENTS
               </button>
             </div>
@@ -33,8 +57,8 @@ const Strategy = () => {
       </div>
 
       {/* Quality Plan Section */}
-      <div className="bg-[url('/Images/Banner/1.png')] max-w-screen h-screen bg-cover">
-        <div className="px-10 w-full mx-auto max-w-[1200px] flex flex-col justify-center items-start gap-10 text-white">
+      <div className="bg-[url('/Images/Banner/Quality_Background.png')] max-w-screen h-screen bg-cover">
+        <div className="px-10 w-full mx-auto max-w-[1200px] flex flex-col justify-center items-start gap-10 text-gray-700">
           <div className="group">
             <h1 className="text-heading font-bold group-hover:text-blue-500 pt-5">Quality Plan</h1>
             <div className="w-0 h-[3px] bg-blue-500 mt-1.5 transition-all duration-300 ease-out group-hover:w-full"></div>
@@ -64,37 +88,64 @@ const Strategy = () => {
       </div>
 
       {/* Machines Data Table */}
-      <div className="py-10 flex flex-col justify-center items-center max-w-screen ">
-        <div className='px-10 w-full max-w-[1200px] mx-auto'>
-            <div className='text-heading font bold py-10 '>EQUIPMENTS</div>
-            <table className="table-auto border-collapse border border-gray-300 text-left">
+      <div ref={equipmentsRef} className="py-10 flex flex-col justify-center items-center max-w-screen">
+        <div className="px-10 w-full max-w-[1200px] mx-auto">
+          <div className="text-heading font-bold py-10">EQUIPMENTS</div>
+          <table className="table-auto border-collapse border border-gray-300 text-left">
             <thead>
-                <tr className="bg-gray-200">
+              <tr className="bg-gray-200">
                 <th className="border border-gray-300 px-4 py-2 hidden md:table-cell">Id</th>
                 <th className="border border-gray-300 px-4 py-2">Name of Machine</th>
                 <th className="border border-gray-300 px-4 py-2">Qty</th>
                 <th className="border border-gray-300 px-4 py-2 hidden md:table-cell">Size and Capacity</th>
-                <th className="border border-gray-300 px-4 py-2 ">Image</th>
-                </tr>
+                <th className="border border-gray-300 px-4 py-2">Image</th>
+              </tr>
             </thead>
             <tbody>
-                {machinesData.map((machine) => (
+              {machinesData.map((machine) => (
                 <tr key={machine.slNo}>
-                    <td className="border border-gray-300 px-4 py-2 hidden md:table-cell">{machine.slNo}</td>
-                    <td className="border border-gray-300 px-4 py-2">{machine.name}</td>
-                    <td className="border border-gray-300 px-4 py-2">{machine.qty}</td>
-                    <td className="border border-gray-300 px-4 py-2 hidden md:table-cell">
+                  <td className="border border-gray-300 px-4 py-2 hidden md:table-cell">{machine.slNo}</td>
+                  <td className="border border-gray-300 px-4 py-2">{machine.name}</td>
+                  <td className="border border-gray-300 px-4 py-2">{machine.qty}</td>
+                  <td className="border border-gray-300 px-4 py-2 hidden md:table-cell">
                     {machine.sizeAndCapacity}
-                    </td>
-                    <td className="border border-gray-300 px-4 py-2 hidden md:table-cell">
-                    Image
-                    </td>
+                  </td>
+                  <td className="border border-gray-300 px-4 py-2">
+                    <a
+                      href="#!"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        openModal(machine.imageUrl);
+                      }}
+                    >
+                      <img
+                        src={machine.imageUrl}
+                        alt={`Machine ${machine.slNo}`}
+                        className="w-16 h-16 object-contain transform transition-transform duration-200 hover:scale-110 cursor-pointer"
+                      />
+                    </a>
+                  </td>
                 </tr>
-                ))}
+              ))}
             </tbody>
-            </table>
+          </table>
         </div>
+      </div>
+
+      {/* Modal for Image Preview */}
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+          <div className="bg-white p-4 rounded-lg relative">
+            <button
+              onClick={closeModal}
+              className="absolute top-2 right-2 text-xl text-gray-700"
+            >
+              ✖
+            </button>
+            <img src={selectedImage} alt="Modal Preview" className="max-w-[600px] max-h-[600px] object-contain" />
+          </div>
         </div>
+      )}
     </div>
   );
 };
