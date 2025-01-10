@@ -1,22 +1,33 @@
-import React from "react";
+import React, { useRef } from "react";
 import Values from "@/components/custom/values";
-import { careerSchema } from '@/constants/data'
+import { careerSchema } from '@/constants/data';
 import Forms from '@/components/custom/forms';
 import { FormEnum } from "@/constants/data";
+
 const Career = () => {
-    const fields = [
-        { name: "firstName", label: "First Name", required: true, placeholder: "First Name" },
-        { name: "lastName", label: "Last Name", required: true, placeholder: "Last Name" },
-        { name: "email", label: "Email", required: true, type: "email", placeholder: "Email" },
-        { name: "phone", label: "Phone", required: false, placeholder: "Phone" },
-        { name: "resume", label: "Resume", required: true, placeholder: "Resume",type:"file" },
-        { name: "state", label: "State", required: false, placeholder: "State" },
-        { name: "country", label: "Country", required: false, placeholder: "Country" },
-        { name: "message", label: "Message", required: true, type: "textarea", placeholder: "Message" },
-      ];
-      const onSubmit  = (data) => {
-        console.log("Contact Us Form Submitted", data);
-      };
+  const formRef = useRef(null); // Ref for the form section
+
+  const fields = [
+    { name: "firstName", label: "First Name", required: true, placeholder: "First Name" },
+    { name: "lastName", label: "Last Name", required: true, placeholder: "Last Name" },
+    { name: "email", label: "Email", required: true, type: "email", placeholder: "Email" },
+    { name: "phone", label: "Phone", required: false, placeholder: "Phone" },
+    { name: "resume", label: "Resume", required: true, placeholder: "Resume", type: "file" },
+    { name: "state", label: "State", required: false, placeholder: "State" },
+    { name: "country", label: "Country", required: false, placeholder: "Country" },
+    { name: "message", label: "Message", required: true, type: "textarea", placeholder: "Message" },
+  ];
+
+  const onSubmit = (data) => {
+    console.log("Contact Us Form Submitted", data);
+  };
+
+  const scrollToForm = () => {
+    if (formRef.current) {
+      formRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div>
       {/* Header Section */}
@@ -30,16 +41,16 @@ const Career = () => {
         <div className="relative z-10 container mx-auto max-w-[1200px] w-full ">
           <div className="flex flex-col md:flex-row items-start px-10">
             {/* Text Wrapper */}
-            <div >
+            <div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 py-10">
                 Ingenious Engineering Career
               </h2>
-              <a
-                href="/en/careers/apply-now.html"
-                className="inline-flex items-center bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-blue-600 transition"
+              <button
+                onClick={scrollToForm}
+                className="mt-6 bg-blueish text-white py-3 px-8 rounded-xl hover:bg-black transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 Apply Now
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -79,14 +90,18 @@ const Career = () => {
         </div>
       </div>
       <Values />
-      <div className="mx-auto max-w-[1200px] flex flex-col md:flex-row w-full h-fit items-center md:items-start justify-center p-8">
-        {/* Left Section - Form */}
 
-  <Forms
-        schema={careerSchema}
-        fields={fields}
-        handleSubmit={onSubmit}
-        formType={FormEnum.CAREER}
+      {/* Form Section */}
+      <div
+        ref={formRef}
+        className="mx-auto max-w-[1200px] flex flex-col md:flex-row w-full h-fit items-center md:items-start justify-center p-8"
+      >
+        {/* Left Section - Form */}
+        <Forms
+          schema={careerSchema}
+          fields={fields}
+          handleSubmit={onSubmit}
+          formType={FormEnum.CAREER}
         />
 
         {/* Right Section - Text */}

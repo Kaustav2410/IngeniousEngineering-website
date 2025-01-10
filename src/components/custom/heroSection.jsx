@@ -10,7 +10,7 @@ const HeroSection = () => {
                 High Quality
             </h1>
             <p className='text-3xl'>Delivery excellence in engineering with precision-crafted solution for construction and mining machinery.</p>
-            <button type='button' className=' w-40 h-14 rounded-xl px-6 bg-blueish text-neutral-50 shadow hover:bg-blacklala mt-3 '>GET IN TOUCH</button>
+            <button type='button' className=' w-40 h-14 rounded-xl px-6 bg-blueish text-neutral-50 shadow hover:bg-blacklala mt-3 '><a href='/contact-us'>GET IN TOUCH</a></button>
             </div>
     </section>
   )

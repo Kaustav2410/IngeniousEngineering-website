@@ -8,53 +8,44 @@ import ProductCarouselStructure from "./productCarouselStructure";
 import ProductDetails from "./productDetails";
 
 
-  const CarouselCustom = ({Data,extraData,optionalStyles,cardStructure,initialSlideIndex }) => {
-    console.log("initialSlideIndex",initialSlideIndex);
-    // cardStructure
+const CarouselCustom = ({ Data, extraData, optionalStyles, cardStructure, initialSlideIndex }) => {
     const handleSlideClick = (index) => {
-        if (emblaApi) {
-          emblaApi.scrollTo(index);
-          emblaApi.reInit();
-        }
-      };
-    const OPTIONS = { loop: true,
-     };
-    const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS, [
-      AutoScroll({ playOnInit: true, stopOnInteraction: false, speed: .3 }),
-    ]);
-    const [activeIndex, setActiveIndex] = useState(0);
-    if (initialSlideIndex !== null && initialSlideIndex >= 0 && initialSlideIndex !== activeIndex) {
-        handleSlideClick(initialSlideIndex);
+      if (emblaApi) {
+        emblaApi.scrollTo(index);
+        emblaApi.reInit();
       }
+    };
+
+    const OPTIONS = { loop: true };
+    const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS, [
+      AutoScroll({ playOnInit: true, stopOnInteraction: false, speed: 1.5 }),
+    ]);
+
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    if (initialSlideIndex !== null && initialSlideIndex >= 0 && initialSlideIndex !== activeIndex) {
+      handleSlideClick(initialSlideIndex);
+    }
+
     useEffect(() => {
-        if (!emblaApi) return;
+      if (!emblaApi) return;
 
-        // Scroll to the slide if `initialSlideIndex` is provided
+      const handleSelect = () => {
+        setActiveIndex(emblaApi.selectedScrollSnap());
+      };
 
-
-        const handleSelect = () => {
-          setActiveIndex(emblaApi.selectedScrollSnap());
-        };
-
-        emblaApi.on("select", handleSelect);
-        return () => emblaApi.off("select", handleSelect);
-      }, [emblaApi, initialSlideIndex, activeIndex]);
-    // console.log(cardStructure,SectionEnum.AWARDS)
+      emblaApi.on("select", handleSelect);
+      return () => emblaApi.off("select", handleSelect);
+    }, [emblaApi, initialSlideIndex, activeIndex]);
 
     return (
-        <>
-        <section
-          className="embla overflow-hidden mx-auto px-4 sm:px-6 md:px-8 max-w-full"
-          style={{ paddingBottom: "10px" }}
-        >
+      <>
+        <section className="embla overflow-hidden mx-auto w-full max-w-[1200px] pb-10">
           <div className="embla__viewport" ref={emblaRef}>
-            <div className="embla__container flex gap-4 max-w-[1200px] w-full mx-auto px-10">
+            <div className="embla__container flex gap-4 w-full mx-auto px-4 sm:px-6 md:px-10">
               {Data &&
                 Data.map((data, index) => {
-                  if (
-                    SectionEnum.AWARDS === cardStructure ||
-                    SectionEnum.HOME === cardStructure
-                  ) {
+                  if (SectionEnum.AWARDS === cardStructure || SectionEnum.HOME === cardStructure) {
                     return (
                       <AwardHomeCarouselStructure
                         key={index}
@@ -81,11 +72,7 @@ import ProductDetails from "./productDetails";
         {/* Render the Timeline for the Active Slide */}
         {SectionEnum.AWARDS === cardStructure && (
           <div className="timeline-container mt-8">
-            {Data[activeIndex] && (
-              <AlternateReverseTimeline
-                timelineData={Data[activeIndex].timelineData}
-              />
-            )}
+            {Data[activeIndex] && <AlternateReverseTimeline timelineData={Data[activeIndex].timelineData} />}
           </div>
         )}
 

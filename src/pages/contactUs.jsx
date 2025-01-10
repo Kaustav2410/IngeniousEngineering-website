@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import image from "/Images/Banner/Conversation.png";
-import Forms from '@/components/custom/forms';
+import Forms from '@/components/custom/forms'; 
 import { contactUsSchema } from '@/constants/data'
 import { FormEnum } from '@/constants/data';
 const ContactUs = () => {
@@ -35,8 +35,6 @@ const ContactUs = () => {
 //     "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland", "Syria", "Tajikistan", "Tanzania", "Thailand", "Timor-Leste",
 //     "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom",
 //     "United States", "Uruguay", "Uzbekistan", "Vanuatu", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe"];
-
-
 
   return (
     <section className="bg-gray-100">
