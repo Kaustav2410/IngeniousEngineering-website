@@ -1,6 +1,8 @@
 import Navbar from "@/components/custom/navbar";
 import Values from "@/components/custom/values";
 import image from "/Images/Others/4.svg";
+import Certificate_1 from "/Images/Others/Certificate_1.png";
+import Certificate_2 from "/Images/Others/Certificate_2.png";
 
 const About = () => {
   return (
@@ -37,12 +39,43 @@ const About = () => {
         </div>
       </div>
 
+      <div className="flex flex-col items-center justify-center p-4">
+  <h1 className="text-6xl font-bold mb-14">CERTIFICATE</h1>
+  <div className="flex flex-row gap-24"> {/* Increased gap to add more space */}
+    {/* Certificate 1 */}
+    <div className="flex flex-col items-center bg-white shadow-md p-4 rounded-lg max-w-sm">
+      <img
+        src={Certificate_1} // Replace with your certificate image path
+        alt="Certificate 1"
+        className="w-full rounded-md mb-4 transition-transform duration-300 ease-in-out hover:scale-125"
+      />
+      <p className="text-gray-600 text-center">
+        Ingenious Engineering Pvt. Ltd. is certified under DIN EN ISO 3834-3, demonstrating compliance with standard quality requirements for fusion welding of metallic materials, ensuring high-quality welding practices in both workshop and field installations.
+      </p>
+    </div>
+    {/* Certificate 2 */}
+    <div className="flex flex-col items-center bg-white shadow-md p-4 rounded-lg max-w-sm">
+      <img
+        src={Certificate_2} // Replace with your certificate image path
+        alt="Certificate 2"
+        className="w-full rounded-md mb-4 transition-transform duration-300 ease-in-out hover:scale-125"
+      />
+      <p className="text-gray-600 text-center">
+        The company adheres to ISO 3834-3 standards, reflecting its commitment to maintaining standard quality requirements in fusion welding processes, thereby ensuring the reliability and safety of its welded products.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
       <Values />
+      
 
       {/* Leadership Team Section */}
       <div className="flex flex-col justify-center items-center max-w-screen mx-auto mt-10 pb-14 bg-gray-100">
         <div className="mx-auto max-w-[1200px] w-full p-10 ">
-            <h2 className="text-6xl font-bold text-center mb-14">Leadership Team</h2>
+            <h2 className="text-6xl font-bold text-center mb-14">LEADERSHIP TEAM</h2>
             <div className="flex flex-col gap-16 w-full">
             {/* Leader 1 */}
 

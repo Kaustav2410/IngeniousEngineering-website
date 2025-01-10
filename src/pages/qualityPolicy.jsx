@@ -5,7 +5,7 @@ const QualityPolicy = () => {
     <section className=' group text-text bg-gray-100 p-10 '>
         <div className='w-full max-w-[1200px] mx-auto flex flex-col justify-center items-center gap-5'>
             <div className=" pb-10 w-fit flex flex-col justify-center items-center">
-                <h3 className="text-heading font-bold relative group-hover:text-blue-500">Quality Policy</h3>
+                <h3 className="text-heading font-bold relative group-hover:text-blue-500">QUALITY POLICY</h3>
                 <div className="w-0 h-[3px] bg-blue-500 mt-1.5 transition-all duration-300 ease-out group-hover:w-3/4">
                 </div>
             </div>
