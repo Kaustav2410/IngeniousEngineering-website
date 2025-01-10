@@ -8,7 +8,7 @@ const Values = () => {
   return (
     <div className="flex flex-col items-center justify-center py-8  mt-12">
       <h1 className=" font-bold text-center mb-12 text-6xl">OUR VALUES</h1>
-      <div className="grid grid-cols-3 gap-4 max-w-5xl w-full mt-2">
+      <div className="grid grid-cols-1 grid-rows-4 md:grid-cols-3 md:grid-rows-2 gap-10 mt-2 px-10 w-[1200px] max-w-full mx-auto">
         {/* Customer First (Top-left corner) */}
         <div className="flex flex-col items-center justify-center col-start-1 row-start-1">
           <img
@@ -23,7 +23,7 @@ const Values = () => {
         </div>
 
         {/* Integrity (Top-right corner) */}
-        <div className="flex flex-col items-center justify-center col-start-3 row-start-1">
+        <div className="flex flex-col items-center justify-center col-start-1  md:col-start-3  md:row-start-1 row-start-2">
           <img
             src={integrity} // Replace with the actual path to your icon
             alt="Integrity"
@@ -36,7 +36,7 @@ const Values = () => {
         </div>
 
         {/* Accountability (Bottom-left corner) */}
-        <div className="flex flex-col items-center justify-center col-start-1 row-start-3">
+        <div className="flex flex-col items-center justify-center col-start-1  md:row-start-2 row-start-3">
           <img
             src={account} // Replace with the actual path to your icon
             alt="Accountability"
@@ -49,7 +49,7 @@ const Values = () => {
         </div>
 
         {/* Respect (Bottom-right corner) */}
-        <div className="flex flex-col items-center justify-center col-start-3 row-start-3">
+        <div className="flex flex-col items-center justify-center col-start-1 md:col-start-3  md:row-start-2  row-start-4">
           <img
             src={respect} // Replace with the actual path to your icon
             alt="Respect"

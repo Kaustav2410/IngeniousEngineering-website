@@ -42,42 +42,55 @@ import ProductDetails from "./productDetails";
     // console.log(cardStructure,SectionEnum.AWARDS)
 
     return (
-      <>
-        <section className="embla overflow-hidden max-w-[1200px] mx-auto">
+        <>
+        <section
+          className="embla overflow-hidden mx-auto px-4 sm:px-6 md:px-8 max-w-full"
+          style={{ paddingBottom: "10px" }}
+        >
           <div className="embla__viewport" ref={emblaRef}>
-            <div className="embla__container flex">
-            {Data && Data.map((data, index) => {
-                const isActive = index
-                if (SectionEnum.AWARDS === cardStructure || SectionEnum.HOME === cardStructure) {
+            <div className="embla__container flex gap-4 max-w-[1200px] w-full mx-auto px-10">
+              {Data &&
+                Data.map((data, index) => {
+                  if (
+                    SectionEnum.AWARDS === cardStructure ||
+                    SectionEnum.HOME === cardStructure
+                  ) {
                     return (
-                    <AwardHomeCarouselStructure
+                      <AwardHomeCarouselStructure
                         key={index}
                         data={data}
-                        optionalStyles={optionalStyles}
-                    />
+                        optionalStyles={`${optionalStyles} flex-shrink-0`}
+                      />
                     );
-                } else if (SectionEnum.PRODUCTS === cardStructure) {
+                  } else if (SectionEnum.PRODUCTS === cardStructure) {
                     return (
-                        <ProductCarouselStructure data={data} optionalStyles={optionalStyles} index={index}
-                        handleSlideClick={handleSlideClick} />
+                      <ProductCarouselStructure
+                        key={index}
+                        data={data}
+                        optionalStyles={`${optionalStyles} flex-shrink-0`}
+                        index={index}
+                        handleSlideClick={handleSlideClick}
+                      />
                     );
-                }
+                  }
                 })}
             </div>
           </div>
         </section>
 
         {/* Render the Timeline for the Active Slide */}
-        { SectionEnum.AWARDS===cardStructure &&  <div className="timeline-container mt-8">
-          {Data[activeIndex] && (
-            <AlternateReverseTimeline
-              timelineData={Data[activeIndex].timelineData}
-            />
-          )}
-        </div>}
-        { SectionEnum.PRODUCTS===cardStructure &&
-          Data[activeIndex] && (
-            <ProductDetails data={Data[activeIndex]}/>
+        {SectionEnum.AWARDS === cardStructure && (
+          <div className="timeline-container mt-8">
+            {Data[activeIndex] && (
+              <AlternateReverseTimeline
+                timelineData={Data[activeIndex].timelineData}
+              />
+            )}
+          </div>
+        )}
+
+        {SectionEnum.PRODUCTS === cardStructure && Data[activeIndex] && (
+          <ProductDetails data={Data[activeIndex]} />
         )}
       </>
     );

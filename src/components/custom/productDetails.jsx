@@ -1,5 +1,4 @@
 import React from 'react'
-import image from "/chip.jpeg"
 const ProductDetails = ({data}) => {
   return (
    <div className='w-full h-full bg-white py-20 flex justify-center items-center'>
@@ -10,17 +9,11 @@ const ProductDetails = ({data}) => {
                          <ol className="flex flex-col items-start justify-center gap-2 list-disc ">
                            {data.productData.map((pdata)=>{
                             return(
-                                <li key={pdata.id} className="text-text ">{pdata}</li>
+                                <li key={pdata.id} className="text-xl ">{pdata}</li>
                             )
                            })}
                          </ol>
                        </div>
-                       {/* Image on the Left */}
-                       <img
-                         src={image}
-                         alt="Keshava Murthy"
-                         className="w-40 h-40 rounded-lg shadow-md"
-                       />
                      </div>
    </div>
   )
