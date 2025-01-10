@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import image from "../assets/chip.jpeg";
+import image from "/Images/Banner/Conversation.png";
 import Forms from '@/components/custom/forms';
 import { contactUsSchema } from '@/constants/data'
 import { FormEnum } from '@/constants/data';
@@ -50,7 +50,7 @@ const ContactUs = () => {
       </div>
 
       {/* Contact Form Section */}
-      <div className="flex flex-col md:flex-row justify-center gap-10 py-12 px-6 bg-gray-200">
+      <div className="flex flex-col md:flex-row justify-center md:items-baseline items-end gap-10 py-12 px-6 bg-gray-200">
 
         <Forms
             schema={contactUsSchema}
@@ -60,21 +60,21 @@ const ContactUs = () => {
             />
 
         {/* Contact Details */}
-        <div className="w-full max-w-lg text-right text-gray-700">
-          <h2 className="text-xl font-semibold mb-2"> Ingenious Engineering Pvt. Ltd</h2>
+        <div className="w-full max-w-[1200px] px-10 text-right text-gray-700">
+          <h2 className="text-2xl font-semibold mb-2"> Ingenious Engineering Pvt. Ltd</h2>
 
-          <h3 className="text-xl font-semibold">Address</h3>
-          <p className="mt-2"> Plot NO. 49-P2, Jakkasandra Industrial Area, <br />
+          <h3 className="text-2xl font-semibold">Address</h3>
+          <p className="mt-2 text-lg"> Plot NO. 49-P2, Jakkasandra Industrial Area, <br />
           Bengaluru -563130</p>
 
-          <h3 className="text-xl font-semibold">Phone</h3>
-          <p className="mt-2">+61 1800 987 525</p>
+          <h3 className="text-2xl font-semibold">Phone</h3>
+          <p className="mt-2 text-lg">+61 1800 987 525</p>
 
-          <h3 className="text-xl font-semibold mt-4">Fax</h3>
-          <p className="mt-2">+61 1300 33 8482</p>
+          <h3 className="text-2xl font-semibold mt-4">Fax</h3>
+          <p className="mt-2 text-lg">+61 1300 33 8482</p>
 
-          <h3 className="text-xl font-semibold mt-4">Email</h3>
-          <p className="mt-2">customerservice@crmining.com</p>
+          <h3 className="text-2xl font-semibold mt-4">Email</h3>
+          <p className="mt-2 text-lg">customerservice@crmining.com</p>
         </div>
       </div>
     </section>

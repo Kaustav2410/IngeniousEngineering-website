@@ -10,7 +10,6 @@ const Forms = ({ schema, fields, handleSubmit,formType}) => {
 
   return (
     <div className="w-full max-w-3xl">
-      <p className="text-sm text-gray-600 mb-6">* indicates required fields</p>
       <form
         className={`${FormEnum.CAREER===formType?"bg-white":"bg-gray-200"} p-10 rounded-lg`}
         onSubmit={form.handleSubmit((data) => {
@@ -93,6 +92,7 @@ const Forms = ({ schema, fields, handleSubmit,formType}) => {
           Submit
         </button>
       </form>
+      <p className="text-sm text-gray-600 mb-6 pl-10">* indicates required fields</p>
     </div>
   );
 };

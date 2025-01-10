@@ -1,4 +1,5 @@
 import image from "/chip.jpeg"
+import awardImage from "/Images/Others/AwardsImage.png"
 import { z } from "zod"
 export const contactUsSchema = z.object({
     firstName: z.string().min(1, { message: "First name is required." }),
@@ -33,11 +34,11 @@ export const FormEnum = {
 export const ClientData= [
     {
         title:"Volvo India Private Limited",
-        imageUrl:"/Images/Logos/png-transparent-volvo-logo-volvo-cars-ab-volvo-logo-pga-tour-volvo-car-logo-brand-company-text-trademark.png"
+        imageUrl:"/Images/Logos/processed_image_3.3.png"
     },
     {
         title:" Kobelco Construction Equipment India Pvt. Ltd.",
-        imageUrl:"/Images/Logos/png-transparent-kobelco-hd-logo.png"
+        imageUrl:"/Images/Logos/processed_image_2.2.png"
     },
     {
         title:"Tata Hitachi Construction Machinery",
@@ -45,21 +46,44 @@ export const ClientData= [
     },
     {
         title:"BHEL",
-        imageUrl:"/Images/Logos/manufacturing-ntpc-limited-industry-logo-area.jpg"
+        imageUrl:"/Images/Logos/processed_image_1.1.png"
     },
     {
         title:"BEML Limited",
         imageUrl:"/Images/Logos/BEML_Limited_Logo.png"
     },
-    // {
-    //     title:"L&T Komatsu Limited"
-    // },
-    // {
-    //     title:"Leeboy India Equipment Pvt. Ltd."
-    // },
-    // {
-    //     title:"Doosan Infracore India Pvt. Ltd."
-    // },
+    {
+        title:"L&T Komatsu Limited",
+        imageUrl:"/Images/Logos/processed_image_5.5.png"
+    },
+    {
+        title:"Leeboy India Equipment Pvt. Ltd.",
+        imageUrl:"/Images/Logos/Processed_image_4.jpg"
+    },
+    {
+        title:"Doosan Infracore India Pvt. Ltd.",
+        imageUrl:"/Images/Logos/processed_image_6.png"
+    },
+]
+export const HomeCardData = [
+    {
+        title:"Product",
+        imageUrl:"/Images/Others/1.svg",
+        description:"We manufacture OEM equipment to specifications,supported by in-house engineering and design",
+        tagline:"Explore more"
+    },
+    {
+        title:"Strategy",
+        imageUrl:"/Images/Others/2.svg",
+        description:"Success through precision,efficiency, and continuous improvement.",
+        tagline:"Explore more"
+    },
+    {
+        title:"Awards",
+        imageUrl:"/Images/Others/3.svg",
+        description:"Honored with awards for innovation, quality, and leadership.",
+        tagline:"Explore more"
+    },
 ]
 export const ProductData= [
     {
@@ -93,11 +117,22 @@ export const ProductData= [
             "Liner Plates"
           ]
     },
+    {
+        title:"MINING MACHINERY",
+        imageUrl:"/Images/Others/7.svg",
+        productData:[
+            "Crusher Frames for Stone Crushing Machinery.",
+            "Rotors",
+            "Chassis for Stone Crushing Machinery.",
+            "Liner Plates"
+          ]
+    },
 
 ]
   export const AwardsData = [
     {
       title: "Volvo India Private Limited",
+      imageUrl:"/Images/Logos/processed_image_3.3.png",
       timelineData: [
         {
           year: 2010,
@@ -106,7 +141,7 @@ export const ProductData= [
               name: "For Performace on Delivery in year 2010-11",
               description:
                 "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta odio laborum sed est, delectus minima!",
-              image: image,
+              image: awardImage,
             },
           ],
         },
@@ -116,7 +151,7 @@ export const ProductData= [
             {
                 name: "For Performace on Delivery in year 2011-12",
               description: "Another milestone achieved!",
-              image: image,
+              image: awardImage,
             },
           ],
         },
@@ -126,7 +161,7 @@ export const ProductData= [
             {
                 name: "For Performace on Delivery in year 2012-13",
               description: "Another milestone achieved!",
-              image: image,
+              image: awardImage,
             },
           ],
         },
@@ -136,7 +171,7 @@ export const ProductData= [
             {
                 name: "For Performace on Delivery in year 2013-14",
               description: "Another milestone achieved!",
-              image: image,
+              image: awardImage,
             },
           ],
         },
@@ -146,7 +181,7 @@ export const ProductData= [
             {
                 name: "For Performace on Delivery in year 2015-16",
               description: "Another milestone achieved!",
-              image: image,
+              image: awardImage,
             },
           ],
         },
@@ -156,7 +191,7 @@ export const ProductData= [
             {
                 name: "**For Performace on Delivery in year 2016-15",
               description: "Another milestone achieved!",
-              image: image,
+              image: awardImage,
             },
           ],
         },
@@ -164,6 +199,7 @@ export const ProductData= [
     },
     {
       title: "Koblaco India Private Limited",
+      imageUrl:"/Images/Logos/processed_image_2.2.png",
       timelineData: [
         {
           year: 2022,
@@ -172,7 +208,7 @@ export const ProductData= [
               name: "Award 21k",
               description:
                 "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta odio laborum sed est, delectus minima!",
-              image: image,
+              image: awardImage,
             },
           ],
         },
@@ -182,7 +218,7 @@ export const ProductData= [
             {
               name: "Award 23k",
               description: "Another milestone achieved!",
-              image: image,
+              image: awardImage,
             },
           ],
         },
@@ -192,46 +228,47 @@ export const ProductData= [
             {
               name: "Award 24k",
               description: "Another milestone achieved!",
-              image: image,
+              image: awardImage,
             },
           ],
         },
       ],
     },
-    {
-      title: "TELCON",
-      timelineData: [
-        {
-          year: 2010,
-          details: [
-            {
-              name: "For Performance on Delivery in year 2010-11",
-              description:
-                "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta odio laborum sed est, delectus minima!",
-              image: image,
-            },
-            {
-              name: "For Performance on Quality in year 2010-11",
-              description:
-                "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta odio laborum sed est, delectus minima!",
-              image: image,
-            },
-          ],
-        },
-        {
-          year: 2011,
-          details: [
-            {
-                name: "For Performance on Quality in year 2011-12",
-              description: "Another milestone achieved!",
-              image: image,
-            },
-          ],
-        },
-      ],
-    },
+    // {
+    //   title: "TELCON",
+    //   timelineData: [
+    //     {
+    //       year: 2010,
+    //       details: [
+    //         {
+    //           name: "For Performance on Delivery in year 2010-11",
+    //           description:
+    //             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta odio laborum sed est, delectus minima!",
+    //           image: image,
+    //         },
+    //         {
+    //           name: "For Performance on Quality in year 2010-11",
+    //           description:
+    //             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta odio laborum sed est, delectus minima!",
+    //           image: image,
+    //         },
+    //       ],
+    //     },
+    //     {
+    //       year: 2011,
+    //       details: [
+    //         {
+    //             name: "For Performance on Quality in year 2011-12",
+    //           description: "Another milestone achieved!",
+    //           image: image,
+    //         },
+    //       ],
+    //     },
+    //   ],
+    // },
     {
       title: "Bharat Heavy Electricals Limited(BHEL)",
+       imageUrl:"/Images/Logos/processed_image_1.1.png",
       timelineData: [
         {
           year: 2011,
@@ -240,7 +277,7 @@ export const ProductData= [
               name: "For Performance on Delivery in year 2011-12",
               description:
                 "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta odio laborum sed est, delectus minima!",
-              image: image,
+              image: awardImage,
             },
           ],
         },
@@ -251,7 +288,7 @@ export const ProductData= [
                 name: "For Performance on Delivery in year 2012-13",
                 description:
                   "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta odio laborum sed est, delectus minima!",
-                image: image,
+                image: awardImage,
               },
             ],
           },
@@ -262,7 +299,7 @@ export const ProductData= [
                 name: "For Performance on Delivery in year 2013-14",
                 description:
                   "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta odio laborum sed est, delectus minima!",
-                image: image,
+                image: awardImage,
               },
             ],
           },
@@ -273,7 +310,7 @@ export const ProductData= [
                 name: "For Performance on Delivery in year 2011-12",
                 description:
                   "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta odio laborum sed est, delectus minima!",
-                image: image,
+                image: awardImage,
               },
             ],
           },
@@ -284,7 +321,7 @@ export const ProductData= [
                 name: "For Performance on Delivery in year 2011-12",
                 description:
                   "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta odio laborum sed est, delectus minima!",
-                image: image,
+                image: awardImage,
               },
             ],
           },
@@ -295,7 +332,7 @@ export const ProductData= [
                 name: "For Performance on Delivery in year 2011-12",
                 description:
                   "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta odio laborum sed est, delectus minima!",
-                image: image,
+                image: awardImage,
               },
             ],
           },
@@ -304,6 +341,7 @@ export const ProductData= [
     },
     {
       title: "BHEL",
+       imageUrl:"/Images/Logos/processed_image_1.1.png",
       timelineData: [
         {
           year: 2018,
@@ -312,13 +350,13 @@ export const ProductData= [
               name: "Vendor Meet-2018",
               description:
                 "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta odio laborum sed est, delectus minima!",
-              image: image,
+              image: awardImage,
             },
             {
               name: "Best performance on Vendor-2018",
               description:
                 "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta odio laborum sed est, delectus minima!",
-              image: image,
+              image: awardImage,
             },
           ],
         },
@@ -328,12 +366,12 @@ export const ProductData= [
             {
               name: "Appreciation for performance-2019",
               description: "Another milestone achieved!",
-              image: image,
+              image: awardImage,
             },
             {
               name: "Award 22",
               description: "Another milestone achieved!",
-              image: image,
+              image: awardImage,
             },
           ],
         },
@@ -341,6 +379,7 @@ export const ProductData= [
     },
     {
       title: "Kobelco",
+      imageUrl:"/Images/Logos/processed_image_2.2.png",
       timelineData: [
         {
           year: 2022,
@@ -349,7 +388,7 @@ export const ProductData= [
               name: "Quality Excellence award 2022-Kobelco",
               description:
                 "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta odio laborum sed est, delectus minima!",
-              image: image,
+              image: awardImage,
             },
           ],
         },
@@ -358,6 +397,7 @@ export const ProductData= [
     },
     {
       title: "Volvo",
+      imageUrl:"/Images/Logos/processed_image_3.3.png",
       timelineData: [
         {
           year: 2016,
@@ -366,7 +406,7 @@ export const ProductData= [
               name: "Supplier of the Month March-2016",
               description:
                 "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta odio laborum sed est, delectus minima!",
-              image: image,
+              image: awardImage,
             },
           ],
         },
@@ -378,7 +418,7 @@ export const ProductData= [
 export const machinesData = [
     {
       slNo: 1,
-      name: "6 axes CNC Floor Mounted Horizontal Boring Machine. Make: FERMAT – Czech Republic",
+      name: "6 axes CNC Floor Mounted Horizontal Boring Machine. Make: FERMAT - Czech Republic",
       qty: 1,
       sizeAndCapacity: `X: 9,500mm, Y: 3,500mm, W+Z: 1,500mm, V: 1,400mm,
                         Table size: 2,000 x 2,400, Table Travel: 1500mm, Table capacity: 25MT,

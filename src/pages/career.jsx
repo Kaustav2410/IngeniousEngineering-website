@@ -27,11 +27,11 @@ const Career = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"></div>
 
         {/* Text Content */}
-        <div className="relative z-10 container mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-start">
+        <div className="relative z-10 container mx-auto max-w-[1200px] w-full ">
+          <div className="flex flex-col md:flex-row items-start px-10">
             {/* Text Wrapper */}
-            <div className="md:w-1/2">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <div >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 py-10">
                 Ingenious Engineering Career
               </h2>
               <a
@@ -46,15 +46,15 @@ const Career = () => {
       </div>
 
       {/* Content Section */}
-      <div className="mt-5 flex justify-center">
-        <div className="w-full max-w-6xl px-6 md:px-16">
+      <div className="mt-5">
+        <div className=" mx-auto max-w-[1200px] w-full px-10">
           {/* Heading */}
           <h3 className="text-4xl md:text-5xl font-bold text-gray-800 mb-8">
             Why You'll Love Working Here
           </h3>
 
           {/* Content */}
-          <div className="flex flex-col md:flex-row items-center md:items-end gap-12">
+          <div className="flex flex-col md:flex-row items-center justify-between md:items-end gap-12">
             {/* Paragraph */}
             <div className="md:w-1/3">
               <p className="text-gray-600  leading-relaxed text-xl">
@@ -79,7 +79,7 @@ const Career = () => {
         </div>
       </div>
       <Values />
-      <div className="flex flex-col md:flex-row w-full h-screen items-center justify-center p-8">
+      <div className="mx-auto max-w-[1200px] flex flex-col md:flex-row w-full h-fit items-center md:items-start justify-center p-8">
         {/* Left Section - Form */}
 
   <Forms
@@ -90,7 +90,7 @@ const Career = () => {
         />
 
         {/* Right Section - Text */}
-        <div className="w-full h-full md:w-1/2 flex flex-col items-end text-right p-8">
+        <div className="w-full h-full md:w-1/2 flex flex-col text-right p-8">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-800 mb-8">
             Do the Work that Matters
           </h1>

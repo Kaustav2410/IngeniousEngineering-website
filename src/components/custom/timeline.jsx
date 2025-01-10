@@ -1,30 +1,46 @@
-import * as React from 'react';
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
+import { useState,useEffect } from 'react';
 const AlternateReverseTimeline = ({timelineData}) => {
 
+    const [pos, setPos] = useState('alternate-reverse');
 
+  useEffect(() => {
+    const handleResize = () => {
+        console.log(window.innerWidth);
+      if(window.innerWidth>765) setPos('alternate-reverse');
+      else setPos('left');
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  console.log(pos);
 
   return (
-    <Timeline position="alternate-reverse">
+    <Timeline
+      position="alternate-reverse"
+    >
       {/* First TimelineItem */}
       <TimelineItem>
         <TimelineSeparator>
-          <TimelineDot />
+          <TimelineDot color="primary"/>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent></TimelineContent>
       </TimelineItem>
 
       {/* Render timeline items dynamically */}
-      {timelineData.map((data, index) => (
-        <React.Fragment key={data.year}>
+      {timelineData.map((data, index) => {
+        return <>
           {/* Year Item */}
-          <TimelineItem>
+          <TimelineItem key={data.year} >
             <TimelineSeparator>
               <span className="font-bold text-lg">{data.year}</span>
               <TimelineConnector />
@@ -34,11 +50,12 @@ const AlternateReverseTimeline = ({timelineData}) => {
 
           {/* Details Items */}
           {data.details.map((detail, detailIndex) => {
-            const position = (index + detailIndex) % 2 === 0 ? "left" : "right";
+            let aposition = (index + detailIndex) % 2 === 0 ? "left" : "right";
+            if(pos==="left") aposition="left";
             return (
-              <TimelineItem key={detail.name} position={position}>
+              <TimelineItem key={detail.name} position={aposition}>
                 <TimelineSeparator>
-                  <TimelineDot />
+                  <TimelineDot color="primary"/>
                   <TimelineConnector />
                 </TimelineSeparator>
                 <TimelineContent>
@@ -55,13 +72,13 @@ const AlternateReverseTimeline = ({timelineData}) => {
               </TimelineItem>
             );
           })}
-        </React.Fragment>
-      ))}
+            </>
+    })}
 
       {/* Last TimelineItem */}
       <TimelineItem>
         <TimelineSeparator>
-          <TimelineDot />
+          <TimelineDot color="primary"/>
         </TimelineSeparator>
         <TimelineContent></TimelineContent>
       </TimelineItem>
