@@ -7,7 +7,7 @@ import respect from "/Images/Others/21.svg";
 const Values = () => {
   return (
     <div className="flex flex-col items-center justify-center py-8  mt-12">
-      <h1 className=" font-bold text-center mb-12 text-6xl">OUR VALUES</h1>
+      <h1 className=" font-bold text-center mb-12 text-heading">OUR VALUES</h1>
       <div className="grid grid-cols-1 grid-rows-4 md:grid-cols-3 md:grid-rows-2 gap-10 mt-2 px-10 w-[1200px] max-w-full mx-auto">
         {/* Customer First (Top-left corner) */}
         <div className="flex flex-col items-center justify-center col-start-1 row-start-1">

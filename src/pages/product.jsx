@@ -31,7 +31,7 @@ const Product = () => {
       {/* Hero Section */}
       <div className="w-full mx-auto max-w-[1200px] h-2/3 px-10">
         <div className="flex flex-col justify-center items-start gap-10">
-          <h1 className="text-heading text-blueish font-bold">
+          <h1 className="text-subheading md:text-heading text-blueish font-bold">
             Engineering Heavy Machinery<br />
             Performance<br />
             Equipments to Elevate Your
@@ -39,7 +39,7 @@ const Product = () => {
           <p className="text-text max-w-screen-lg text-left text-white">
             Precision-engineered heavy machinery equipment to power your productivity and efficiency
           </p>
-          <div className="flex gap-10 justify-center items-center pb-10">
+          <div className="flex md:flex-row flex-col gap-10 justify-center items-center pb-10">
             <button
               type="button"
               className="w-40 h-14 rounded-xl px-6 bg-blueish text-neutral-50 shadow hover:bg-blacklala"
@@ -58,7 +58,7 @@ const Product = () => {
 
       {/* Carousel Section */}
       <div className="bg-blacklala flex flex-col justify-center items-center text-white py-0" ref={carouselRef}>
-        <h1 className="text-heading font-bold p-10 mx-auto max-w-[1200px] w-full">
+        <h1 className="text-subheading md:text-heading font-bold p-10 mx-auto max-w-[1200px] w-full">
           Our Solutions for Heavy Machinery Equipment
         </h1>
 

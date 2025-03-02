@@ -21,7 +21,7 @@ export default {
                 blacklala:"#1a1a1a",
                 blueish:"#05b4e3",
                 whiteish:"#3f3f3f"
-            }
+            },
     	}
     },
     plugins: [require("tailwindcss-animate")],

@@ -16,9 +16,6 @@ const ProductCarouselStructure = ({optionalStyles, data, index, handleSlideClick
           Precision-driven performance for unmatched cutting efficiency and versatility
         </p>
       </div>
-      <button className="w-32 py-3 rounded-xl px-6 bg-blueish text-black shadow hover:bg-white mb-4">
-        Read More
-      </button>
     </div>
   );
 };

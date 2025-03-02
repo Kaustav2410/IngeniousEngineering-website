@@ -76,9 +76,9 @@ const CarouselCustom = ({ Data, extraData, optionalStyles, cardStructure, initia
           </div>
         )}
 
-        {SectionEnum.PRODUCTS === cardStructure && Data[activeIndex] && (
+        {/* {SectionEnum.PRODUCTS === cardStructure && Data[activeIndex] && (
           <ProductDetails data={Data[activeIndex]} />
-        )}
+        )} */}
       </>
     );
   };

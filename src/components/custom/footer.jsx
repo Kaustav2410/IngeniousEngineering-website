@@ -8,7 +8,7 @@ const Footer = () => {
             <div>
             </div>
             <div className='flex justify-between gap-10 md:items-start flex-col-reverse md:flex-row w-full pb-20'>
-                <div className='w-1/2 max-w-[400px] h-80'>
+                <div className=' max-w-[400px] h-80'>
                 <iframe
                         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31085.47100014029!2d77.827653!3d13.119202!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae042fb2da2d9d%3A0xf9b73806ec289f63!2sFerrum%20Extreme%20Engineering%20Pvt.%20Ltd.!5e0!3m2!1sen!2sus!4v1736357932635!5m2!1sen!2sus"
                         style={{ border: 0, width: '100%',
@@ -23,7 +23,7 @@ const Footer = () => {
                         <li className='pb-5 font-bold text-2xl '>Company</li>
                         <li className="hover:text-blueish transition-colors duration-300 ease-in"><a href='/home'>Home</a></li>
                         <li className="hover:text-blueish transition-colors duration-300 ease-in"><a href='/about-us'>About</a></li>
-                        <li className="hover:text-blueish transition-colors duration-300 ease-in"><a href='/awards'>Awards</a></li>
+                        {/* <li className="hover:text-blueish transition-colors duration-300 ease-in"><a href='/awards'>Awards</a></li> */}
                         <li className="hover:text-blueish transition-colors duration-300 ease-in"><a href='/about-us'>Clients</a></li>
                         <li className="hover:text-blueish transition-colors duration-300 ease-in"><a href='/career'>Career</a></li>
                     </ul>

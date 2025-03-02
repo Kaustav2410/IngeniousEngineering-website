@@ -7,13 +7,13 @@ const Home = () => {
     <section>
         <HeroSection/>
         <div className='flex flex-col justify-around items-center h-fit gap-10 max-w-screen px-10 pb-16 relative ' >
-            <div className='w-full h-2/5 bg-black absolute bottom-0'>sdafsadfasdf</div>
+            <div className='w-full h-2/5 bg-black absolute bottom-0'></div>
             <div className='max-w-[1200px] mx-auto'>
             <div className='flex flex-col justify-center items-center md:items-start gap-10'>
                     <h1 className='text-subheading font-bold pt-10'>Explore Our Equipment & Expertise</h1>
                     <p className='text-2xl text-left '>Founded nearly a decade ago, we've grown through quality, precision, and collaboration,
                     offering top-tier equipment backed by skilled engineers and a dedicated workforce.</p>
-                    <section className='flex flex-col md:flex-row justify-center items-center gap-24 h-fit'>
+                    <section className='flex flex-col md:flex-row justify-center items-center gap-24 h-fit w-full'>
                         {
                             HomeCardData.map((data)=>{
                                 return <ProductCard cardData={data}/>
@@ -49,8 +49,8 @@ const Home = () => {
 
         <div className='flex flex-col justify-around items-center max-w-screen h-screen mx-10'>
             <div className='flex flex-col justify-center items-center gap-10'>
-                <h1 className='text-heading font-bold'>Our Family of Brands</h1>
-                <p className='text-text text-center '>"We proudly supply to renowned OEM clients, ensuring complete satisfaction with our quality and timely
+                <h1 className='md:text-heading text-subheading font-bold'>Our Family of Brands</h1>
+                <p className='text-text md:text-center text-left'>"We proudly supply to renowned OEM clients, ensuring complete satisfaction with our quality and timely
                 delivery. We focus exclusively on serving OEMs, not retail clients."</p>
             </div>
            <div className='mt-5 mx-auto max-w-[1200px] w-full px-10'>
