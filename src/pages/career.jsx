@@ -38,16 +38,16 @@ const Career = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"></div>
 
         {/* Text Content */}
-        <div className="relative z-10 container mx-auto max-w-[1200px] w-full ">
+        <div className="relative container mx-auto max-w-[1200px] w-full ">
           <div className="flex flex-col md:flex-row items-start px-10">
             {/* Text Wrapper */}
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 py-10">
+              <h2 className="text-4xl md:text-5xl font-bold text-white md:mb-4 py-10">
                 Ingenious Engineering Career
               </h2>
               <button
                 onClick={scrollToForm}
-                className="mt-6 bg-blueish text-white py-3 px-8 rounded-xl hover:bg-black transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className=" bg-blueish text-white py-3 px-8 rounded-xl hover:bg-black transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 Apply Now
               </button>
@@ -97,11 +97,18 @@ const Career = () => {
         className="mx-auto max-w-[1200px] flex flex-col md:flex-row w-full h-fit items-center md:items-start justify-center p-8"
       >
         {/* Left Section - Form */}
-        <Forms
-          schema={careerSchema}
-          fields={fields}
-          handleSubmit={onSubmit}
-          formType={FormEnum.CAREER}
+        <iframe
+            width="640"
+            height="480"
+            src="https://forms.office.com/Pages/ResponsePage.aspx?id=1PzlRb6VRkuYpwiCnVKcveawZog_K_hJjNimfL73HhJURDREQkxVWEpSSTI5SjJSSFkxVEdYUk1aQi4u&embed=true"
+            frameBorder="0"
+            marginWidth="0"
+            marginHeight="0"
+            style={{ border: "none", maxWidth: "100%", maxHeight: "100vh" }}
+            allowFullScreen
+            webkitallowfullscreen="true"
+            mozallowfullscreen="true"
+            msallowfullscreen="true"
         />
 
         {/* Right Section - Text */}

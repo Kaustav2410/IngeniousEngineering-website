@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import image from "/Images/Banner/Conversation.png";
-import Forms from '@/components/custom/forms'; 
+import Forms from '@/components/custom/forms';
 import { contactUsSchema } from '@/constants/data'
 import { FormEnum } from '@/constants/data';
 const ContactUs = () => {
@@ -48,17 +48,31 @@ const ContactUs = () => {
       </div>
 
       {/* Contact Form Section */}
-      <div className="flex flex-col md:flex-row justify-center md:items-baseline items-end gap-10 py-12 px-6 bg-gray-200">
+      <div className="flex flex-col md:flex-row justify-center md:items-start items-center gap-10 py-12 px-6 bg-gray-200">
 
-        <Forms
+        {/* <Forms
             schema={contactUsSchema}
             fields={fields}
             handleSubmit={onSubmit}
             formType={FormEnum.CONTACT}
-            />
-
+            /> */}
+            <div className="w-full max-w-3xl">
+                <iframe
+                    width="640"
+                    height="480"
+                    src="https://forms.office.com/Pages/ResponsePage.aspx?id=1PzlRb6VRkuYpwiCnVKcveawZog_K_hJjNimfL73HhJURDREQkxVWEpSSTI5SjJSSFkxVEdYUk1aQi4u&embed=true"
+                    frameBorder="0"
+                    marginWidth="0"
+                    marginHeight="0"
+                    style={{ border: "none", maxWidth: "100%", maxHeight: "100vh" }}
+                    allowFullScreen
+                    webkitallowfullscreen="true"
+                    mozallowfullscreen="true"
+                    msallowfullscreen="true"
+                    />
+            </div>
         {/* Contact Details */}
-        <div className="w-full max-w-[1200px] px-10 text-right text-gray-700">
+        <div className="w-full md:w-1/2  text-right text-gray-700">
           <h2 className="text-2xl font-semibold mb-2"> Ingenious Engineering Pvt. Ltd</h2>
 
           <h3 className="text-2xl font-semibold">Address</h3>
