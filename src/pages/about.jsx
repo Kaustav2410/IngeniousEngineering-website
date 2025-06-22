@@ -1,4 +1,4 @@
-import logo from "/Images/Logos/Logo.png"
+import logo from "/Images/Logos/Ingenious_Logo.png"
 import Values from "@/components/custom/values";
 import Certificate_1 from "/Images/Others/Certificate_1.png";
 import Certificate_2 from "/Images/Others/Certificate_2.png";
@@ -60,7 +60,7 @@ const About = () => {
         className="w-full rounded-md mb-4 transition-transform duration-300 ease-in-out hover:scale-105"
       />
       <p className="text-gray-600 text-center">
-        The company adheres to ISO 3834-3 standards, reflecting its commitment to maintaining standard quality requirements in fusion welding processes, thereby ensuring the reliability and safety of its welded products.
+       The Company adheres to ISO 9001:2015 which sets the foundation for an effective Quality Management System (QMS), helping organizations consistently meet customer and regulatory requirements. It emphasizes leadership, risk management, process control, performance evaluation, and continual improvement.
       </p>
     </div>
   </div>

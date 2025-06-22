@@ -3,7 +3,7 @@ import React from 'react';
 const ProductCarouselStructure = ({optionalStyles, data, index, handleSlideClick}) => {
   return (
     <div
-      className={`embla__slide ${optionalStyles} flex-shrink-0 flex justify-around items-start gap-20 px-10 flex-col text-white group  max-w-[500px] max-h-[400px] md:w-[400px]  mb-10`}
+      className={`embla__slide ${optionalStyles} flex-shrink-0 flex justify-around items-start gap-20 px-10 flex-col text-white group  max-w-[500px] h-[350px] md:w-[350px]  mb-10`}
       onClick={() => handleSlideClick(index)}
       style={{ backgroundImage: `url(${data.imageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
@@ -11,10 +11,10 @@ const ProductCarouselStructure = ({optionalStyles, data, index, handleSlideClick
         <h3 className="text-3xl font-bold relative group-hover:text-blue-500">
           {data.title}
         </h3>
-        <div className="w-0 h-[3px] bg-blue-500 mt-1.5 transition-all duration-300 ease-out group-hover:w-full"></div>
+        {/* <div className="w-0 h-[3px] bg-blue-500 mt-1.5 transition-all duration-300 ease-out group-hover:w-full"></div>
         <p className="text-text max-w-[300px] mt-2 hidden md:block">
           Precision-driven performance for unmatched cutting efficiency and versatility
-        </p>
+        </p> */}
       </div>
     </div>
   );

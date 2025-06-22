@@ -77,7 +77,7 @@ const Career = () => {
             </div>
 
             {/* Image/Icon */}
-            <div className="md:w-1/3">
+            {/* <div className="md:w-1/3">
               <figure className="w-full h-48 md:h-64 bg-gray-200 rounded-lg overflow-hidden">
                 <img
                   src="https://s7d2.scene7.com/is/image/Caterpillar/CM20220307-56c1d-11453"
@@ -85,7 +85,7 @@ const Career = () => {
                   className="w-full h-full object-cover"
                 />
               </figure>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -98,18 +98,18 @@ const Career = () => {
       >
         {/* Left Section - Form */}
         <iframe
-            width="640"
-            height="480"
-            src="https://forms.office.com/Pages/ResponsePage.aspx?id=1PzlRb6VRkuYpwiCnVKcveawZog_K_hJjNimfL73HhJURDREQkxVWEpSSTI5SjJSSFkxVEdYUk1aQi4u&embed=true"
-            frameBorder="0"
-            marginWidth="0"
-            marginHeight="0"
-            style={{ border: "none", maxWidth: "100%", maxHeight: "100vh" }}
-            allowFullScreen
-            webkitallowfullscreen="true"
-            mozallowfullscreen="true"
-            msallowfullscreen="true"
-        />
+                    width="640"
+                    height="480"
+                    src="https://forms.office.com/Pages/ResponsePage.aspx?id=1PzlRb6VRkuYpwiCnVKcveawZog_K_hJjNimfL73HhJURDREQkxVWEpSSTI5SjJSSFkxVEdYUk1aQi4u&embed=true"
+                    frameBorder="0"
+                    marginWidth="0"
+                    marginHeight="0"
+                    style={{ border: "none", maxWidth: "100%", maxHeight: "100vh" }}
+                    allowFullScreen
+                    webkitallowfullscreen="true"
+                    mozallowfullscreen="true"
+                    msallowfullscreen="true"
+                    />
 
         {/* Right Section - Text */}
         <div className="w-full h-full md:w-1/2 flex flex-col text-right p-8">
@@ -122,7 +122,7 @@ const Career = () => {
               href="mailto:info@ferrum.co.in"
               className="text-blue-500 underline"
             >
-              info@ferrum.co.in
+             info@ingeniousengineering.in
             </a>
           </div>
         </div>

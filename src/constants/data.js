@@ -64,6 +64,14 @@ export const ClientData= [
         title:"Doosan Infracore India Pvt. Ltd.",
         imageUrl:"/Images/Logos/processed_image_6.png"
     },
+    {
+        title:"TATA Advanced Systems Ltd.",
+        imageUrl:"/Images/Logos/processed_image_6.png"
+    },
+    {
+        title:"Metso Minerals.",
+        imageUrl:"/Images/Logos/processed_image_6.png"
+    },
 ]
 export const HomeCardData = [
     {
@@ -78,54 +86,45 @@ export const HomeCardData = [
         description:"Success through precision,efficiency, and continuous improvement.",
         tagline:"Explore more"
     },
-    {
-        title:"Awards",
-        imageUrl:"/Images/Others/3.svg",
-        description:"Honored with awards for innovation, quality, and leadership.",
-        tagline:"Explore more"
-    },
+    // {
+    //     title:"Awards",
+    //     imageUrl:"/Images/Others/3.svg",
+    //     description:"Honored with awards for innovation, quality, and leadership.",
+    //     tagline:"Explore more"
+    // },
 ]
 export const ProductData= [
     {
-        title:"EXCAVATORS",
-        imageUrl:"/Images/Others/5.svg",
-        productData:[
-            "Buckets Sizes 0.75T to 125T Excavators",
-            "Under Frames of Excavators up to 60T Capacity",
-            "Revolving Frames of Excavators up to 60T Capacity",
-            "Booms, Arms and Buckets for Excavators up 60T Capacity",
-            "Linkage Structures for Excavators",
-            "Excavator Attachments such as Tilt Couplers, Chubb Thumb, Twin fork, Track Guards etc."
-          ]
+        title:"ATAGS Chassis",
+        imageUrl:"/Images/Website/Pictures/Products/ATAGSChassis2.JPG",
     },
     {
-        title:" ROAD MACHINERY",
-        imageUrl:"/Images/Others/6.svg",
-        productData:[
-            "Main Frame for Pneumatic Tyre Roller Compactors, Pavers etc.",
-            "Main Frames and Structures for Compactors.",
-            "Compactor Parts for Drive System."
-          ]
+        title:" Rolling Machine",
+        imageUrl:"/Images/Website/Pictures/Products/RollingMachine.JPG",
     },
     {
-        title:"MINING MACHINERY",
-        imageUrl:"/Images/Others/7.svg",
-        productData:[
-            "Crusher Frames for Stone Crushing Machinery.",
-            "Rotors",
-            "Chassis for Stone Crushing Machinery.",
-            "Liner Plates"
-          ]
+        title:"ATAGS Saddle",
+        imageUrl:"Images/Website/Pictures/Products/ATAGSSaddle.JPG",
     },
     {
-        title:"MINING MACHINERY",
-        imageUrl:"/Images/Others/7.svg",
-        productData:[
-            "Crusher Frames for Stone Crushing Machinery.",
-            "Rotors",
-            "Chassis for Stone Crushing Machinery.",
-            "Liner Plates"
-          ]
+        title:"DrawBar",
+        imageUrl:"/Images/Website/Pictures/Products/Drawbar.JPG",
+    },
+    {
+        title:"NP1213 Frame",
+        imageUrl:"/Images/Website/Pictures/Products/NP1213Frame.JPG",
+    },
+    {
+        title:"SMI Chamber",
+        imageUrl:"/Images/Website/Pictures/Products/SMIChamber.JPG",
+    },
+    {
+        title:"SS Vaccum Tank",
+        imageUrl:"/Images/Website/Pictures/Products/SSVaccumTankForITER.JPG",
+    },
+    {
+        title:"TLD TMX150",
+        imageUrl:"/Images/Website/Pictures/Products/TLDTMX150.JPG",
     },
 
 ]
@@ -496,4 +495,3 @@ export const ProductData= [
       imageUrl: "Images/Others/9.svg",
     },
   ];
-

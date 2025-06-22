@@ -49,13 +49,13 @@ const Strategy = () => {
               >
                 <a href="/contact-us">GET IN TOUCH</a>
               </button>
-              <button
+              {/* <button
                 type="button"
                 onClick={scrollToEquipments} // Add scroll handler
                 className="w-50 h-14 rounded-xl px-6 bg-white text-black shadow hover:bg-black hover:text-white"
               >
                 VIEW EQUIPMENTS
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
@@ -93,7 +93,7 @@ const Strategy = () => {
       </div>
 
       {/* Machines Data Table */}
-      <div ref={equipmentsRef} className="py-10 flex flex-col justify-center items-center max-w-screen">
+      {/* <div ref={equipmentsRef} className="py-10 flex flex-col justify-center items-center max-w-screen">
         <div className="px-10 w-full max-w-[1200px] mx-auto">
           <div className="text-subheading md:text-heading font-bold py-10">EQUIPMENTS</div>
           <table className="table-auto border-collapse border border-gray-300 text-left">
@@ -135,7 +135,7 @@ const Strategy = () => {
             </tbody>
           </table>
         </div>
-      </div>
+      </div> */}
 
       {/* Modal for Image Preview */}
       {isModalOpen && (

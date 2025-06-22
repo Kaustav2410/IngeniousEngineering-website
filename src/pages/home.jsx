@@ -13,12 +13,10 @@ const Home = () => {
                     <h1 className='text-subheading font-bold pt-10'>Explore Our Equipment & Expertise</h1>
                     <p className='text-2xl text-left '>Founded nearly a decade ago, we've grown through quality, precision, and collaboration,
                     offering top-tier equipment backed by skilled engineers and a dedicated workforce.</p>
-                    <section className='flex flex-col md:flex-row justify-center items-center gap-24 h-fit w-full'>
-                        {
-                            HomeCardData.map((data)=>{
-                                return <ProductCard cardData={data}/>
-                            })
-                    }
+                    <section className="flex flex-col custom-lg:flex-row justify-center items-center gap-24 h-fit w-full">
+                    {HomeCardData.map((data) => (
+                        <ProductCard cardData={data} key={data.id} />
+                    ))}
                     </section>
             </div>
             </div>
@@ -30,26 +28,26 @@ const Home = () => {
             <img src="/Images/Banner/Video_aboutUs.png" alt="about_us_image" width="600" height="300"/>
             <div className='flex justify-around items-center gap-10 flex-col md:flex-row w-full max-w-[1200px] mx-auto'>
                 <div className='flex flex-col justify-center items-center gap-1'>
-                    <h2 className='text-subheading font-bold'>2023</h2>
+                    <h2 className='text-subheading font-bold'>2022</h2>
                     <div className='text-xl bg-blueish w-[100px] h-[4px]'></div>
                     <p className='text-text'>Year of Establishment</p>
                 </div>
                 <div className='flex flex-col justify-center items-center gap-1'>
-                    <h2 className='text-subheading font-bold'>45+</h2>
+                    <h2 className='text-subheading font-bold'>150+</h2>
                     <div className='text-xl bg-blueish w-[70px] h-[4px]'></div>
                     <p className='text-text'>Employees</p>
                 </div>
                 <div className='flex flex-col justify-center items-center gap-1'>
-                    <h2 className='text-subheading font-bold'>6,000m <sup>2</sup>  </h2>
+                    <h2 className='text-subheading font-bold'>3,200m <sup>2</sup>  </h2>
                     <div className='text-xl bg-blueish w-[160px] h-[4px]'></div>
-                    <p className='text-text'>Total Land Area</p>
+                    <p className='text-text'>Total Covered Area</p>
                 </div>
             </div>
         </div>
 
         <div className='flex flex-col justify-around items-center max-w-screen h-screen mx-10'>
             <div className='flex flex-col justify-center items-center gap-10'>
-                <h1 className='md:text-heading text-subheading font-bold'>Our Family of Brands</h1>
+                <h1 className='md:text-heading text-subheading font-bold'>Our Customers</h1>
                 <p className='text-text md:text-center text-left'>"We proudly supply to renowned OEM clients, ensuring complete satisfaction with our quality and timely
                 delivery. We focus exclusively on serving OEMs, not retail clients."</p>
             </div>

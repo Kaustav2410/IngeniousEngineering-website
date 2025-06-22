@@ -10,21 +10,35 @@ const QualityPolicy = () => {
                 </div>
             </div>
             <div className='flex flex-col justify-center items-start gap-5'>
-                <p><strong>FeRRUM</strong> has an engineering team for process development & to achieve the required quality through process controls. The process control route ensures <strong>FeRRUM</strong> at every stage of manufacturing, bringing the required product quality & standards with utmost satisfaction to the customers.</p>
+               <p> At <strong>Ingenious</strong>, our dedicated engineering team specializes in process development and achieving uncompromised quality through rigorous process control measures. We ensure quality at every stage of manufacturing—delivering excellence that meets and exceeds customer expectations.</p>
 
-                <p><strong>FeRRUM</strong> has supplied with various fabricated assemblies without any complaints in quality and delivery schedules.</p>
+                <p>Over the years, <strong>Ingenious</strong> has successfully supplied a wide range of fabricated assemblies with a proven track record of zero complaints in both product quality and delivery schedules.</p>
+                <p>
+                    Our facility is fully equipped with advanced machinery, supported by a team of experienced technologists and engineers under stable management. We take pride in executing custom and highly specialized assignments that meet unique customer specifications. From extreme engineering challenges to precision fabrication, <strong>Ingenious</strong> is capable of fulfilling diverse and complex requirements.
+                </p>
+                <p>
+                    Our strength lies in our people—qualified, skilled, and continuously evolving technical staff and consultants, along with a committed, dynamic workforce. Together, they drive innovation and performance in line with Total Quality Management (TQM) principles, ensuring that every project aligns perfectly with our clients’ specifications.
+                </p>
+                <p>
+                    At <strong>Ingenious</strong>, we don’t just aim to be the best—we aim to make the impossible achievable. We take pride in our ability to differentiate between just “doing the work” and “delivering quality.” No task is considered too difficult when backed by our extreme engineering mindset.
+                </p>
+                <p>We also offer extensive capacity for large-scale medium and heavy fabrication jobs. Our workshop is equipped with:</p>
+                <ol className='list-disc flex flex-col gap-6 list-inside'>
+                    <li>In-house Non-Destructive Testing (NDT) facilities</li>
+                    <li>Ultrasonic testing equipment with certified operators</li>
+                    <li>6-Axis CNC Floor-Mounted Horizontal Boring Machine</li>
+                    <li>450-ton CNC Press Brake</li>
+                    <li>CNC Four-Roll Bending Machine</li>
+                    <li>High-Density CNC Plasma Cutting Machine</li>
+                    <li>EOT Cranes (10T and 5T capacities)</li>
+                    <li>Shot Blasting and Painting Booths</li>
+                    <li>MIG Welding, Drilling, and Riveting Machines</li>
+                </ol>
+                <p>
+                    We’ve also established a strong vendor ecosystem for outsourced processes like stress relieving and precision machining.
+                    <strong>Ingenious</strong> stands ready to be your partner in engineering excellence—turning bold ideas into built reality.
+                </p>
 
-                <p><strong>FeRRUM</strong> is well-equipped with the machines, technologists and engineers with stable management to undertake a unique specification work as per specific unique requirement as specific assignment of the esteemed customers and is capable of meeting any such or unique requirement in extreme engineering apart from maintaining good health of machines and equipments and regular maintaining & uplifting the skill of the valued and well-spruced & well-groomed workforce.</p>
-
-                <p><strong>FeRRUM</strong> achieves targets with the engagement of highly qualified and skilled experienced technical staff and consultants with rich exposures and with not only skilled but dedicated non-stagnant workforces to achieve new heights under the strict requirements of and compliance of Total Quality Management System (TQM) and to keep in high esteem the specific specification and requirement of esteemed customer.</p>
-
-                <p><strong>FeRRUM</strong> gives desired specific results through its extreme engineering and hence does not claim best but there is no sense of 'difficult to do' as we understand the differences as well as similarities between the work and quality work.</p>
-
-                <strong><p>FeRRUM has a huge additional scope for fabrication jobs and is fully equipped with machineries in order to handle medium/heavy fabrication jobs of a large magnitude. The unit is equipped with in-house NDT testing equipment, Ultrasonic testing machine with qualified operating personnel. Engineering unit i.e. manufacturing unit is engaged in manufacturing of medium and heavy fabricated structures.</p>
-                </strong>
-
-                <strong><p>Manufacturing facilities includes critical machines 6 axes CNC Floor Mounted Horizontal Boring Machine-9M*3M*1.5M Traverse, CNC Press brake 450 tonnes, CNC Four Roll Bending, CNC High density Plasma cutting machine, EOT cranes 10T and 5T capacity, Shot Blasting Booth, Painting Booth, MIG welding, Drilling machine, Riveting machine. A good vendor base has been developed for subcontracting certain operations of machining, stress relieving etc.</p>
-                </strong>
             </div>
 
         </div>
