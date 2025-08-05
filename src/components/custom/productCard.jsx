@@ -77,7 +77,7 @@ const ProductCard = ({ cardData }) => {
                 transform: 'rotateY(180deg)', // Correct text orientation
               }}
             >
-              <h1 className="text-4xl font-bold w-full hover:scale-110 duration-300">{`${cardData.tagline}`}</h1>
+              <a href={cardData.url}><h1 className="text-4xl font-bold w-full hover:scale-110 duration-300">{`${cardData.tagline}`}</h1></a>
             </div>
           </div>
         </div>

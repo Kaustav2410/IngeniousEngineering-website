@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import strategyFlow from '/Images/Banner/5.png';
-import { machinesData } from '@/constants/data';
+// import { machinesData } from '@/constants/data';
 
 const Strategy = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -30,11 +30,11 @@ const Strategy = () => {
 
   return (
     <div>
-      {/* Hero Section */}
-      <div className="bg-[url('/Images/Banner/3.png')] max-w-screen h-fit bg-cover">
+      {/* Hero Section  bg-[url('/Images/Banner/3.png')]*/}
+      <div className="bg-blacklala max-w-screen h-fit bg-cover">
         <div className="w-full mx-auto max-w-[1200px] h-2/3 px-10">
           <div className="flex flex-col justify-center items-start gap-10">
-            <h1 className="text-subheading md:text-heading text-blueish font-bold">
+            <h1 className="text-subheading md:text-heading text-blueish font-semibold">
               Engineering Heavy Machinery<br />
               Performance<br />
               Equipments to Elevate Your
@@ -49,13 +49,13 @@ const Strategy = () => {
               >
                 <a href="/contact-us">GET IN TOUCH</a>
               </button>
-              <button
+              {/* <button
                 type="button"
                 onClick={scrollToEquipments} // Add scroll handler
                 className="w-50 h-14 rounded-xl px-6 bg-white text-black shadow hover:bg-black hover:text-white"
               >
                 VIEW EQUIPMENTS
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
@@ -65,10 +65,10 @@ const Strategy = () => {
       <div className="bg-[url('/Images/Banner/Quality_Background.png')] max-w-screen h-fit bg-cover">
         <div className="px-10 pb-10 w-full mx-auto max-w-[1200px] flex flex-col justify-center items-start gap-10 text-gray-700">
           <div className="group">
-            <h1 className="text-heading font-bold group-hover:text-blue-500 pt-5">QUALITY PLAN</h1>
+            <h1 className="text-heading font-bold group-hover:text-blue-500 pt-5">OUR QUALITY PLAN</h1>
             <div className="w-0 h-[3px] bg-blue-500 mt-1.5 transition-all duration-300 ease-out group-hover:w-full"></div>
           </div>
-          <ul className="text-xl flex flex-col gap-4">
+          <ul className="text-xl flex flex-col gap-4 list-inside list-disc ">
             <li>Incoming Material Inspection</li>
             <li>Prepare AutoCAD Drawings</li>
             <li>Prepare Nest for Gas Cutting</li>
@@ -87,13 +87,13 @@ const Strategy = () => {
       {/* Process Flow Section */}
       <div className="w-full bg-black py-10">
         <div className="px-10 text-white flex flex-col justify-center items-start w-full max-w-[1200px] mx-auto">
-          <h1 className="text-subheading font-bold py-10">STRUCTURE FABRICATION PROCESS FLOW</h1>
+          <h1 className="text-subheading font-bold py-10">OUR STRUCTURE FABRICATION PROCESS FLOW</h1>
           <img src={strategyFlow} alt="timing-alt" />
         </div>
       </div>
 
       {/* Machines Data Table */}
-      <div ref={equipmentsRef} className="py-10 flex flex-col justify-center items-center max-w-screen">
+      {/* <div ref={equipmentsRef} className="py-10 flex flex-col justify-center items-center max-w-screen">
         <div className="px-10 w-full max-w-[1200px] mx-auto">
           <div className="text-subheading md:text-heading font-bold py-10">EQUIPMENTS</div>
           <table className="table-auto border-collapse border border-gray-300 text-left">
@@ -135,7 +135,7 @@ const Strategy = () => {
             </tbody>
           </table>
         </div>
-      </div>
+      </div> */}
 
       {/* Modal for Image Preview */}
       {isModalOpen && (

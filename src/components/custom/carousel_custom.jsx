@@ -5,7 +5,7 @@ import AlternateReverseTimeline from "./timeline";
 import AwardHomeCarouselStructure from "./awardHomeCarouselStructure";
 import { SectionEnum } from '@/constants/data'
 import ProductCarouselStructure from "./productCarouselStructure";
-import ProductDetails from "./productDetails";
+// import ProductDetails from "./productDetails";
 
 
 const CarouselCustom = ({ Data, extraData, optionalStyles, cardStructure, initialSlideIndex }) => {

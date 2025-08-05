@@ -7,6 +7,9 @@ export default {
     ],
     theme: {
     	extend: {
+            screens: {
+                "custom-lg": "1200px",
+              },
     		borderRadius: {
     			lg: 'var(--radius)',
     			md: 'calc(var(--radius) - 2px)',

@@ -4,10 +4,10 @@ import Home from "./pages/Home";
 import About from "./pages/about"
 import ContactUs from "./pages/contactUs"
 import Career from "./pages/career"
-import Awards from "./pages/awards";
+// import Awards from "./pages/awards";
 import Product from "./pages/product";
 import QualityPolicy from "./pages/qualityPolicy";
-import Strategy from "./pages/strategy";
+// import Strategy from "./pages/strategy";
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
         <Route path="/contact-us" element={<ContactUs/>}  />
         <Route path="/career" element={<Career/>}  />
         <Route path="/quality-policy" element={<QualityPolicy/>}  />
-        <Route path="/strategy" element={<Strategy/>}  />
+        {/* <Route path="/strategy" element={<Strategy/>}  /> */}
     </Routes>
   );
 }

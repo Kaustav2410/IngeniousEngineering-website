@@ -59,12 +59,12 @@ const ContactUs = () => {
             <div className="w-full max-w-3xl">
                 <iframe
                     width="640"
-                    height="480"
+                    height="1000"
                     src="https://forms.office.com/Pages/ResponsePage.aspx?id=1PzlRb6VRkuYpwiCnVKcveawZog_K_hJjNimfL73HhJURDREQkxVWEpSSTI5SjJSSFkxVEdYUk1aQi4u&embed=true"
                     frameBorder="0"
-                    marginWidth="0"
+                    marginWidth="0" 
                     marginHeight="0"
-                    style={{ border: "none", maxWidth: "100%", maxHeight: "100vh" }}
+                    style={{ border: "none", maxWidth: "100%", maxHeight: "100vh", minHeight: "1200px" }}
                     allowFullScreen
                     webkitallowfullscreen="true"
                     mozallowfullscreen="true"
@@ -80,13 +80,10 @@ const ContactUs = () => {
           Bengaluru -563130</p>
 
           <h3 className="text-2xl font-semibold">Phone</h3>
-          <p className="mt-2 text-lg">+91-080-27971482, 83</p>
-
-          <h3 className="text-2xl font-semibold mt-4">Fax</h3>
-          <p className="mt-2 text-lg">+91-80-27971428</p>
+          <p className="mt-2 text-lg">+91 81512 00318</p>
 
           <h3 className="text-2xl font-semibold mt-4">Email</h3>
-          <p className="mt-2 text-lg">info@ferrum.co.in</p>
+          <p className="mt-2 text-lg">info@ingeniousengineering.in</p>
         </div>
       </div>
     </section>
