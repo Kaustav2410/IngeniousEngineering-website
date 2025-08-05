@@ -2,3 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+    .text-gradient-primary{
+        background: linear-gradient(to right, #1D4ED8, #3730A3); /* Tailwind blue-700 to indigo-800 */
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    /* This is the key change for the hover effect */
+    .text-gradient-hover:hover {
+        background: linear-gradient(to right, #1D4ED8, #3730A3); /* Tailwind blue-700 to indigo-800 */
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    /* Your other custom classes can also go here if they are utility-like */
+    .bg-abcd {
+        background-color: #1D4ED8;
+    }
+}

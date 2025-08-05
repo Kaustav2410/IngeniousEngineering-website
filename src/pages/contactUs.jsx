@@ -59,12 +59,12 @@ const ContactUs = () => {
             <div className="w-full max-w-3xl">
                 <iframe
                     width="640"
-                    height="480"
+                    height="1000"
                     src="https://forms.office.com/Pages/ResponsePage.aspx?id=1PzlRb6VRkuYpwiCnVKcveawZog_K_hJjNimfL73HhJURDREQkxVWEpSSTI5SjJSSFkxVEdYUk1aQi4u&embed=true"
                     frameBorder="0"
-                    marginWidth="0"
+                    marginWidth="0" 
                     marginHeight="0"
-                    style={{ border: "none", maxWidth: "100%", maxHeight: "100vh" }}
+                    style={{ border: "none", maxWidth: "100%", maxHeight: "100vh", minHeight: "1200px" }}
                     allowFullScreen
                     webkitallowfullscreen="true"
                     mozallowfullscreen="true"

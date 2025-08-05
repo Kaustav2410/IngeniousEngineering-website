@@ -3,7 +3,7 @@ import React from 'react';
 const ProductCarouselStructure = ({optionalStyles, data, index, handleSlideClick}) => {
   return (
     <div
-      className={`embla__slide ${optionalStyles} flex-shrink-0 flex justify-around items-start gap-20 px-10 flex-col text-white group  max-w-[500px] h-[350px] md:w-[350px]  mb-10`}
+      className={`embla__slide ${optionalStyles} flex-shrink-0 flex justify-around items-start gap-20 px-10 flex-col text-white group h-[350px] max-w-[350px]  mb-10`}
       onClick={() => handleSlideClick(index)}
       style={{ backgroundImage: `url(${data.imageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
